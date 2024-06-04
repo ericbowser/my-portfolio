@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "tail": "npx tailwindcss -i ./app/input.css -o ./app/output.css --watch"
   },
   "dependencies": {
     "axios": "^1.7.2",

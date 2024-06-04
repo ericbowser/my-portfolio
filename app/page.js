@@ -11,7 +11,8 @@ import {Card} from "react-bootstrap";
 import Skills from "./components/Skills";
 import {FiDribbble} from "react-icons/fi";
 import {FaReact} from "react-icons/fa";
-import head2 from '../public/head2.jpg'
+import head2 from '../public/head2.jpg';
+import Footer from './components/Footer';
 import {TbBrandJavascript} from "react-icons/tb";
 
 /*export default function getServerSideProps() {
@@ -129,13 +130,11 @@ const Portfolio = () => {
                         }
                     </section>
                 </section>
+                <Footer/>
             </main>
-            <footer
-                id="footerSection"
-                className="fixed-bottom mt-8 p-4 mt-xxl-4 text-black text-center dark:bg-gray-800 dark:text-white">
-                <h2>E.R.B. Eric Ryan Bowser</h2>
-                <p>ericryanbowser@gmail.com</p>
-            </footer>
+            {/* <section className={'flex flex-row text-center'}>
+                <Footer/>
+            </section>*/}
         </div>
     );
 }
