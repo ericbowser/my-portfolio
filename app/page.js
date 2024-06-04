@@ -7,13 +7,10 @@ import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
 import Image from 'next/image';
-import {Card} from "react-bootstrap";
 import Skills from "./components/Skills";
 import {FiDribbble} from "react-icons/fi";
-import {FaReact} from "react-icons/fa";
 import head2 from '../public/head2.jpg';
 import Footer from './components/Footer';
-import {TbBrandJavascript} from "react-icons/tb";
 
 /*export default function getServerSideProps() {
     const secretKey = process.env.SMTP_HOST; // Ensure this variable is not prefixed with NEXT_PUBLIC_
@@ -42,26 +39,19 @@ const Portfolio = () => {
     const getCard = (skill = {}) => {
         return (
             <div className={'w-full md:w-1/2 lg:w-1/3 p-4'}>
-                <Card
-                    className={'h-50 rounded-lg p-4 md:p-8 transition-all dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl shadow-cyan-500/20 dark:shadow-lg dark:shadow-cyan-500/30 dark:text-white-400 border-2 border-transparent hover:border-current4'}>
-                    <Card.Title>
+                <div className={'rounded-lg md:p-8 transition-all dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl shadow-cyan-500/20 dark:shadow-lg dark:shadow-cyan-500/30 dark:text-white-400 border-2 border-transparent hover:border-current4'}>
+                    <div className={'bg-grey-100 dark:bg-gray-800 text-teal-950 dark:text-white'}>
                         <span className={'flex p-5 gap-5 text-center font-burtons'}>
-                            {skill.title === "React" ? <FaReact size={20}/> : null}
+                            {skill.icon !== null ? skill.icon : ''}
                             {skill.title}
                         </span>
-                    </Card.Title>
-                    <div
-                        className={'relative mx-auto bg-gradient-to-b from-teal-500 w-60 h-40 py-5 overflow-hidden'}>
-                        <Image src={skill.image} objectFit={'cover'} layout='fill' alt={'headshot'}/>
                     </div>
-                    <Card.Body>
-                        <Card.Text
-                            style={{height: '420px'}}
-                            className={'text-center p-5'}>
+                    <div className={'w-auto p-2'} style={{height: '200px'}}>
+                        <div className={'pt-2'}>
                             {skill.description}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -121,20 +111,20 @@ const Portfolio = () => {
                         <Image src={head2} objectFit={'cover'} layout='fill' alt={'headshot'}/>
                     </div>
                     <h2 className={'text-5xl py-10 text-black dark:text-white font-medium text-center'}>Skills</h2>
-                    <section className={'flex flex-col md:flex-row flex-wrap dark:text-white dark:bg-gray-800 h-228'}>
-                        {Skills.map((skill, index) => {
-                            return (
-                                getCard(skill)
-                            )
-                        })
-                        }
-                    </section>
+
                 </section>
-                <Footer/>
+                <section className={'flex flex-col md:flex-row flex-wrap dark:text-white dark:bg-gray-800 '}>
+                    {Skills.map((skill, index) => {
+                        return (
+                            getCard(skill)
+                        )
+                    })
+                    }
+                </section>
+                <section>
+                    <Footer/>
+                </section>
             </main>
-            {/* <section className={'flex flex-row text-center'}>
-                <Footer/>
-            </section>*/}
         </div>
     );
 }
