@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "burtons";
+    src: url("../public/Burtons.otf")
+}
+
+.animate-move {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 100%;
+    animation-name: example;
+    animation-duration: 20s;
+}
+
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:white; left:50px; top:50px;}
+    33%  {background-color:blue; left:0px; top:0px;}
+    44%  {background-color:red; left:-50px; top:50px;}
+    55% {background-color:white; left:-100px; top:10px;}
+    66% {background-color:blue; left:-150px; top:20px;}
+    77% {background-color:red; left:-170px; top:40px;}
+    88% {background-color:white; left:-200px; top:60px;}
+    100% {background-color:blue; left:-300px; top:100px;}
+}
