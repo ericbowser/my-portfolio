@@ -5,7 +5,7 @@
   "scripts": {
     "webpack": "webpack-dev-server --mode=development",
     "dev": "next dev -p 3004",
-    "build": "next build",
+    "build": "webpack build --mode=production",
     "start": "next start",
     "lint": "next lint",
     "tail": "npx tailwindcss -i ./app/input.css -o ./app/output.css --watch"
