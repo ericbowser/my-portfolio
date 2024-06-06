@@ -3,22 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "webpack": "webpack-dev-server --mode=development",
+    "webpack": "webpack-dev-server --mode=production",
+    "webpack:dev": "webpack-dev-server --mode=development",
     "dev": "next dev -p 3004",
     "build": "webpack build --mode=production",
     "start": "next start",
     "lint": "next lint",
-    "tail": "npx tailwindcss -i ./app/input.css -o ./app/output.css --watch"
+    "tail": "npx tailwindcss -i ./app/input.css -o ./app/output.css --watch",
+    "env": "npx dotenv-vault@latest pull"
   },
   "dependencies": {
-    "@babel/core": "^7.24.6",
-    "@babel/preset-env": "^7.24.6",
-    "@babel/preset-react": "^7.24.6",
     "axios": "^1.7.2",
-    "babel-loader": "^9.1.3",
     "bootstrap": "^5.3.3",
     "dotenv-webpack": "^8.1.0",
-    "encrypt-js-vault": "^1.0.0",
     "gmail-send": "^1.8.14",
     "react": "^18",
     "react-bootstrap": "^2.10.2",
@@ -30,6 +27,11 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
+    "babel-loader": "^9.1.3",
+    "encrypt-js-vault": "^1.0.0",
     "crypto-browserify": "^3.12.0",
     "css-loader": "^7.1.2",
     "dotencr": "^1.0.3",

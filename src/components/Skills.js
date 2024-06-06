@@ -1,5 +1,4 @@
 ﻿import React from 'react';
-import random from '../../public/random3.jpg'
 import scrum from '../../public/scrum-gpt.png';
 import skills from '../../public/skills_web.jpg';
 import {RiJavascriptLine} from "react-icons/ri";

@@ -5,7 +5,7 @@ console.log('Node env: ', process.env.ENV)
 console.log('Hosted port: ', process.env.PORT)
 
 const port = process.env.PORT || 3000
-const environment = process.env.ENV || 'production'
+const environment = process.env.NODE_ENV || 'production'
 module.exports = {
     entry: './src/index.js',
     mode: port,
@@ -72,4 +72,12 @@ module.exports = {
         port: process.env.PORT,
         host: 'localhost'
     },
+    performance:
+        {
+            hints: false,
+            maxEntrypointSize:
+                12000,
+            maxAssetSize:
+                12000,
+        }
 };

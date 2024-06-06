@@ -5,7 +5,7 @@ import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
 import Skills from "./components/Skills";
 import {FiDribbble} from "react-icons/fi";
-import head2 from '../public/head2.jpg';
+import head2 from '../public/eb-1.jpg';
 import Footer from './components/Footer';
 import styled from "styled-components";
 
@@ -81,12 +81,16 @@ const App = () => {
                             </ul>
                         </section>
                     </nav>
-                    <div className={'text-center p-10 dark:bg-gray-800 dark:text-white'}>
+                    <div className={'flex flex-col p-10 dark:bg-gray-800 dark:text-white'}>
                         <h2 className={'text-5xl py-2 text-teal-600 font-medium'}>Eric Ryan Bowser</h2>
                         <h3 className={'text-2xl py-2'}>Full Stack Developer</h3>
                         <p className={'text-md py-5 leading-0 text-gray-800 dark:text-white'}>
                             Full stack developer with JavaScript, React.js, Node.js and Next.js libraries.
                         </p>
+                        <div
+                            className={'relative mx-auto bg-gradient-to-b from-teal-500 rounded-2xl w-80 h-180 mt-10 overflow-hidden'}>
+                            <img src={head2} alt={'headshot'}/>
+                        </div>
                     </div>
                     <div className={'text-5xl flex justify-center gap-16 p-3 cursor-pointer'}>
                         <a href={'https://github.com/ericbowser/'}>
@@ -103,10 +107,7 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div
-                        className={'relative mx-auto bg-gradient-to-b from-teal-500 rounded-2xl w-60 h-80 mt-10 overflow-hidden'}>
-                        <img src={head2} alt={'headshot'}/>
-                    </div>
+                   
                     <h2 className={'text-5xl py-10 text-black dark:text-white font-medium text-center'}>Skills</h2>
                     <div className={'flex md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                         {Skills.map((skill, index) => {
