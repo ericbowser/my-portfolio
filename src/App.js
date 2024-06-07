@@ -81,15 +81,25 @@ const App = () => {
                             </ul>
                         </section>
                     </nav>
-                    <div className={'flex flex-col p-10 dark:bg-gray-800 dark:text-white'}>
-                        <h2 className={'text-5xl py-2 text-teal-600 font-medium'}>Eric Ryan Bowser</h2>
-                        <h3 className={'text-2xl py-2'}>Full Stack Developer</h3>
-                        <p className={'text-md py-5 leading-0 text-gray-800 dark:text-white'}>
-                            Full stack developer with JavaScript, React.js, Node.js and Next.js libraries.
-                        </p>
+                    <h2 className={'text-5xl py-2 text-teal-600 font-medium text-center font-burtons'}>Eric Ryan Bowser</h2>
+                    <h3 className={'text-2xl py-2 font-burtons font-bold bg-teal-800 w-75 h-50 text-center'}>Full Stack Developer</h3>
+                    <div className={'flex flex-row p-2 dark:bg-gray-800 dark:text-white font-burtons'}>
+                        <div className={'flex-md-row'}>
+                            <h6 className={'py-3 leading-0 dark:bg-gray-800 dark:text-white text-teal-800 font-extrabold justify-evenly'}>
+                                <ul className={'font-bold text-2xl float-right'}>
+                                    <li>React</li>
+                                    <li>.NET</li>
+                                    <li>C#</li>
+                                    <li>JavaScript#</li>
+                                    <li>Node#</li>
+                                </ul>
+                            </h6>
+                        </div>
                         <div
-                            className={'relative mx-auto bg-gradient-to-b from-teal-500 rounded-2xl w-80 h-180 mt-10 overflow-hidden'}>
+                            className={' mx-auto bg-gradient-to-b from-teal-500 rounded-2xl w-60 h-40 mt-10 overflow-hidden'}>
+                            {/*
                             <img src={head2} alt={'headshot'}/>
+*/}
                         </div>
                     </div>
                     <div className={'text-5xl flex justify-center gap-16 p-3 cursor-pointer'}>
@@ -107,7 +117,7 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                   
+
                     <h2 className={'text-5xl py-10 text-black dark:text-white font-medium text-center'}>Skills</h2>
                     <div className={'flex md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                         {Skills.map((skill, index) => {

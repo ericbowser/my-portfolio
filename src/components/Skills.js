@@ -40,7 +40,7 @@ export const Skills = [
                 Also familiar with React-Bootstrap components and Styled-Components.
             </section>
         ),
-        image: random,
+        image: skills,
         icon: <PiFileCssBold size={20} className={'font-extrabold'}/>
     },
     {
@@ -51,7 +51,7 @@ export const Skills = [
                 I have worked extensively with dotnet Standard versions as well as newer dotnet core up to netcore 9.
             </section>
         ),
-        image: random,
+        image: skills,
         icon: <SiDotnet size={20} className={'font-extrabold'}/>
     },
     {
