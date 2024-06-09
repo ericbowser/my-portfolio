@@ -6,9 +6,11 @@ console.log('Hosted port: ', process.env.PORT)
 
 const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'production'
+console.log('port', port);
+console.log('env: ', environment);
 module.exports = {
     entry: './src/index.js',
-    mode: port,
+    mode: environment,
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
@@ -76,8 +78,8 @@ module.exports = {
         {
             hints: false,
             maxEntrypointSize:
-                12000,
+                512000,
             maxAssetSize:
-                12000,
+                512000,
         }
 };

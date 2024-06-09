@@ -18,6 +18,7 @@ export const Skills = [
             </section>
         ),
         image: scrum,
+        link: [{}],
         icon: <RiJavascriptLine size={20} className={'font-extrabold'}/>
     },
     {
@@ -25,22 +26,34 @@ export const Skills = [
         description: (
             <section className={'pt-3'}>
                 Experienced in building single-page applications with React, classes and hooks.
-                I have worked with, developed, implemented, tested and deployed components into
-                a components library to be used internally.
+                Developed, implemented, tested React components in a component library.
+                React caching libraries such as Redux and React Query.
+                React Router as well as Next.js app routing.
             </section>
         ),
         image: skills,
+        link: [
+            {
+                name: 'Card Game',
+                url: 'https://github.com/ericbowser/CardGame'
+            },
+            {
+                name: 'My Portfolio',
+                url: 'https://github.com/ericbowser/my-portfolio'
+            }
+        ],
         icon: <FaReact size={20} className={'font-extrabold'}/>
     },
     {
         title: "CSS",
         description: (
             <section className={'pt-3'}>
-                Familiar with responsive design and grid layout systems using Bootstrap.
-                Also familiar with React-Bootstrap components and Styled-Components.
+                Responsive web design and grid layout systems using Bootstrap, TailwindCSS, and Styled Components.
+                Custom CSS stylesheets and SASS.
             </section>
         ),
         image: skills,
+        link: [{}],
         icon: <PiFileCssBold size={20} className={'font-extrabold'}/>
     },
     {
@@ -52,6 +65,7 @@ export const Skills = [
             </section>
         ),
         image: skills,
+        link: [{}],
         icon: <SiDotnet size={20} className={'font-extrabold'}/>
     },
     {
@@ -65,6 +79,7 @@ export const Skills = [
             </section>
         ),
         image: skills,
+        link: [{}],
         icon: <SiGnubash size={20}/>
     },
     {
@@ -77,6 +92,7 @@ export const Skills = [
             </section>
         ),
         image: skills,
+        link: [{}],
         icon: null
     },
     {
@@ -89,6 +105,7 @@ export const Skills = [
             </section>
         ),
         image: skills,
+        link: [{}],
         icon: <TbFileTypeSql size={20} className={'font-extrabold'}/>
     },
 ];
