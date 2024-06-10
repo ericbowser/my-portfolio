@@ -28,9 +28,9 @@ const App = () => {
 
     return (
         <div className={darkMode ? "dark" : ""}>
-            <main className={'dark:bg-gray-800 dark:text-white'}>
+            <div className={'flex dark:bg-gray-800 dark:text-white'}>
                 <div className={'dark:bg-gray-800 dark:text-white'}>
-                    <Nav/>
+                    <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
                     <div className={'m-32 flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
                         <div className="flex text-center">
                             {/* Profile Image */}
@@ -65,12 +65,15 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <Cards/>
+                    <div>
+                        <h2 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons'}>Skills</h2>
+                        <div className={'flex md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                            <Cards/>
+                        </div>
+                    </div>
                 </div>
-                <div className={'mt-12'}>
-                    <Footer/>
-                </div>
-            </main>
+            </div>
+            <Footer/>
         </div>
     );
 }

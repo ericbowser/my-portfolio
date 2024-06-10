@@ -17,13 +17,13 @@
 }
 
 @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
+    0%   {background-color:black; left:0px; top:0px;}
     25%  {background-color:white; left:50px; top:50px;}
-    33%  {background-color:blue; left:0px; top:0px;}
-    44%  {background-color:red; left:-50px; top:50px;}
+    33%  {background-color:black; left:0px; top:0px;}
+    44%  {background-color:teal; left:-50px; top:50px;}
     55% {background-color:white; left:-100px; top:10px;}
-    66% {background-color:blue; left:-150px; top:20px;}
-    77% {background-color:red; left:-170px; top:40px;}
+    66% {background-color:black; left:-150px; top:20px;}
+    77% {background-color:teal; left:-170px; top:40px;}
     88% {background-color:white; left:-200px; top:60px;}
-    100% {background-color:blue; left:-300px; top:100px;}
+    100% {background-color:black; left:-300px; top:100px;}
 }

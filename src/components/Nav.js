@@ -1,16 +1,16 @@
-﻿import React from 'react';
+﻿import React, {useState} from 'react';
 import {FiDribbble} from "react-icons/fi";
 import {BsFillMoonStarsFill} from "react-icons/bs";
 import {animateScroll as scroll} from "react-scroll";
 
-const Nav = () => {
+const Nav = ({setDarkMode = () => {}, darkMode}) => {
     const scrollTo = () => {
-        scroll.scrollMore(800);
+        scroll.scrollTo(600);
     };
     
     return (
-        <nav className={'relative dark:bg-gray-800 dark:text-white p-4 m-5'}>
-            <section className={'absolute top-2 left-2 dark:bg-gray-800 dark:text-white'}>
+        <nav className={'dark:bg-gray-800 dark:text-white dark:backdrop-blur-lg fixed top-0 left-0 right-0 backdrop-blur-lg bg-white/30 border-b border-gray-200 p-10'}>
+            <section className={'top-2 left-2 dark:bg-gray-800 dark:text-white'}>
                 <h1 className={'text-xl'}>
                     Developed By:
                     <div className={'text-teal-500 font-bold'}>
@@ -18,7 +18,7 @@ const Nav = () => {
                     </div>
                 </h1>
             </section>
-            <section className={'absolute top-2 right-1/2 dark:bg-gray-800 dark:text-white'}>
+            <section className={'absolute top-1 right-1/2 z-50 dark:bg-gray-800 dark:text-white'}>
                 <div onClick={scrollTo}>
                     <FiDribbble className={'animate-move dark:text-white'} size={50}/>
                 </div>

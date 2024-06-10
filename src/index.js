@@ -12,15 +12,13 @@ const router = createBrowserRouter([
     {
         path: '/contact',
         element: (
-            <EmailSubmit />
+            <EmailSubmit/>
         )
     },
     {
         path: '/',
         element: (
-            <div className={'dark:bg-gray-800 dark:text-white'}>
-                <App/>
-            </div>
+            <App/>
         )
     }
 ])

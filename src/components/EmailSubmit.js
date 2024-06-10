@@ -1,7 +1,4 @@
 ﻿import React, {useState, useEffect} from "react";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import {FloatingLabel} from "react-bootstrap"; // Import Bootstrap CSS
 
 const EmailSubmit = () => {
     const [submit, setSubmit] = useState(false);
@@ -82,52 +79,12 @@ const EmailSubmit = () => {
     };
 
     return (
-        <section className={'flex bg-gray-800 text-white min-h-screen font-burtons'}>
-            <a className={'text-center'} href={'/'} onClick={e => {
-                window.history.pushState({}, undefined, '/');
-                setHome('/')
-            }}>
-                <span className={'text-white cursor-pointer hover:bg-red-500 hover:text-white transition-color'}>
-                    Back
-                </span>
-            </a>
-            <div className={'p-20 container-sm items-center'}>
-                <h2 className={'items-center text-justify'}>Email Form</h2>
-                <Form className={'pt-10 bg-gray-800'}>
-                    <Form.Group
-                        className="mb-3"
-                        controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control
-                            className={'cursor-pointer'}
-                            type="name"
-                            placeholder="Enter name"/>
-                        <Form.Label
-                            className={'pt-5'}>
-                            Email address
-                        </Form.Label>
-                        <Form.Control
-                            className={'cursor-pointer'}
-                            type="email"
-                            placeholder="Enter email"/>
-                        <Form.Label className={'pt-10'}>Message</Form.Label>
-                        <FloatingLabel
-                            controlId="floatingTextarea"
-                            label="Message"
-                            aria-placeholder={'Message'}
-                            className="mb-3 p-10 bg-white cursor-pointer"
-                            style={{height: '100px'}}
-                        />
-                    </Form.Group>
-
-                    <Button className={'cursor-pointer'}
-                            variant="primary"
-                            type="submit">
-                        Submit Email
-                    </Button>
-                </Form>
-            </div>
-        </section>
+        <div className={'dark:bg-gray-800 dark:text-white text-black bg-white font-burtons'}>
+                <button className={'cursor-pointer'}
+                        type="submit">
+                    Submit Email
+                </button>
+        </div>
     )
 }
 

@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
+
 console.log('Node env: ', process.env.ENV)
 console.log('Hosted port: ', process.env.PORT)
 
 const port = process.env.PORT || 3000
-const environment = process.env.NODE_ENV || 'production'
+const environment = process.env.NODE_ENV || 'production';
+
 console.log('port', port);
 console.log('env: ', environment);
 module.exports = {
@@ -21,7 +23,7 @@ module.exports = {
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
             https: require.resolve("https-browserify"),
-            url: require.resolve("url/"),
+            url: require.resolve("url"),
             assert: require.resolve("assert"),
             http: require.resolve("stream-http"),
             stream: require.resolve("stream-browserify")
