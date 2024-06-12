@@ -1,14 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
+const config = require('dotenv').config();
 
-console.log('Node env: ', process.env.ENV)
-console.log('Hosted port: ', process.env.PORT)
-
-const port = process.env.PORT || 3000
+const port = config.parsed.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
 
-console.log('port', port);
+console.log('port: ', port);
 console.log('env: ', environment);
 module.exports = {
     entry: './src/index.js',

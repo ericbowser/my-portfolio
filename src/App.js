@@ -65,7 +65,7 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div>
+                    <div className={'m-28'}>
                         <h2 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons'}>Skills</h2>
                         <div className={'flex md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
@@ -73,7 +73,9 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white'}>
+                <Footer/>
+            </div>
         </div>
     );
 }

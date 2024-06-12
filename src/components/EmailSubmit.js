@@ -79,11 +79,15 @@ const EmailSubmit = () => {
     };
 
     return (
-        <div className={'dark:bg-gray-800 dark:text-white text-black bg-white font-burtons'}>
+        <div className={'container dark:bg-gray-800 dark:text-white text-black bg-white font-burtons'}>
+            <form>
+                
                 <button className={'cursor-pointer'}
                         type="submit">
                     Submit Email
                 </button>
+
+            </form>
         </div>
     )
 }

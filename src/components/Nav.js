@@ -23,7 +23,7 @@ const Nav = ({setDarkMode = () => {}, darkMode}) => {
                     <FiDribbble className={'animate-move dark:text-white'} size={50}/>
                 </div>
             </section>
-            <section className={'absolute top-2 right-2 dark:bg-gray-800 dark:text-white'}>
+            <section className={'absolute top-2 right-2 m-10 dark:bg-gray-800 dark:text-white'}>
                 <ul>
                     <li>
 
