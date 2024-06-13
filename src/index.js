@@ -5,16 +5,9 @@ import {
     RouterProvider
 } from 'react-router-dom';
 import {createRoot} from "react-dom/client";
-import EmailSubmit from "./components/EmailSubmit";
 import './output.css';
 
 const router = createBrowserRouter([
-    {
-        path: '/contact',
-        element: (
-            <EmailSubmit/>
-        )
-    },
     {
         path: '/',
         element: (

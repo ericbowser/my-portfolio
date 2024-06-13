@@ -6,7 +6,7 @@ const Cards = () => {
         Skills.map((skill, index) => {
             return (
                 <div key={`${index}${skill}`}
-                     className={'m-5 h-full w-full md:w-1/2 lg:w-1/3 dark:bg-gray-800 dark:text-white'}>
+                     className={'gap-3 h-full md:w-1/2 lg:w-1/3 dark:bg-gray-800 dark:text-white'}>
                     <div
                         className={'rounded-lg md:p-8 transition-all dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl shadow-cyan-500/20 dark:shadow-lg dark:shadow-cyan-500/30 dark:text-white-400 border-2 border-transparent hover:border-current4'}>
                         <div className={'flex font-bold m-12'}>
