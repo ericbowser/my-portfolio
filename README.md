@@ -2,17 +2,20 @@
 
 ## Getting Started
 
-First, run the development server:
+This application is React.js, TailwindCSS, and Webpack bundler
 
-```bash
-npm run webpack
-```
+```npm run start``` - Runs webpack-dev-server
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3002](http://localhost:3000) with your browser to see the result.
 
 # WIP
 1. Initial idea for the design / flow
-2. Adding Skills and Experience
+2. Adding Skills and Experience as Cards
 3. Apps that will add more context to my knowledge
-4. Ensure security and deploy to domain / server
-5. Add to application pool meta-data
+  ### TODO
+- [ ] 🎨 Email Submit
+- [ ] Apps or mini apps or link to domain that contains app
+- [ ] Run on `https://erb-think.com`
+- [ ] 📚 Update documentation
+5. Ensure security and deploy to domain / server
+6. Styles for displaying/showcase other apps to explain abilities in code
