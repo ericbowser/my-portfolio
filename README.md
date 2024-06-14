@@ -5,6 +5,9 @@
 This application is React.js, TailwindCSS, and Webpack bundler
 
 ```npm run start``` - Runs webpack-dev-server
+```npx tailwindcss -i ./src/input.css -o ./src/output.css --watch```
+
+.env does not get checked in, of course, so one will need to be created or vault in .dotencr
 
 Open [http://localhost:3002](http://localhost:3000) with your browser to see the result.
 
