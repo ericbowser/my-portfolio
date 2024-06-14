@@ -19,6 +19,8 @@ Open [http://localhost:3002](http://localhost:3000) with your browser to see the
 - [ ] 🎨 Email Submit
 - [ ] Apps or mini apps or link to domain that contains app
 - [ ] Run on `https://erb-think.com`
+- [ ] Docker container
+- [ ] NGINX reverse proxy
 - [ ] 📚 Update documentation
 5. Ensure security and deploy to domain / server
 6. Styles for displaying/showcase other apps to explain abilities in code
