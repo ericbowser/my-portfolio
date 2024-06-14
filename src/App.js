@@ -1,15 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {BsFillMoonStarsFill} from "react-icons/bs";
 import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
-import Skills from "./components/Skills";
-import {FiDribbble} from "react-icons/fi";
 import head2 from '../public/eb-1.jpg';
 import Footer from './components/Footer';
-import styled from "styled-components";
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
+import EmailSubmit from "./components/EmailSubmit";
 
 /*export default function getServerSideProps() {
     const secretKey = process.env.SMTP_HOST; // Ensure this variable is not prefixed with NEXT_PUBLIC_
@@ -20,19 +17,24 @@ import Cards from "./components/Cards";
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
+    const [showContact, setShowContact] = useState(false);
     const [page, setPage] = useState('/');
 
     useEffect(() => {
-    }, [page]);
+    }, [page, showContact]);
 
+    const scrollToPoint = (to = 0) => {
+        scroll.scrollTo(to);
+        setShowContact(true);
+    }
 
     return (
         <div className={darkMode ? "dark" : ""}>
             <div className={'flex dark:bg-gray-800 dark:text-white'}>
                 <div className={'dark:bg-gray-800 dark:text-white'}>
                     <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
-                    <div className={'m-32 flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
-                        <div className="flex text-center">
+                    <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
+                        <div className="flex text-center" style={{paddingTop: '150px'}}>
                             {/* Profile Image */}
                             <img
                                 className="mx-auto rounded-full w-64 h-72 object-cover"
@@ -57,21 +59,23 @@ const App = () => {
                         <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
                             <AiFillLinkedin/>
                         </a>
-                        <a href="/contact"
-                           onClick={(event) => {
-                               setPage('/contact');
-                           }}
-                        >
+                        <a onClick={() => scrollToPoint(2100)}>
                             <CgMail/>
                         </a>
                     </div>
-                    <div className={'m-28'}>
+                    <div style={{marginLeft: '15%', marginRight: '15%'}}>
                         <h2 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons'}>Skills</h2>
-                        <div className={'flex md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                        <div
+                            className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={'dark:bg-gray-800 dark:text-white'} style={{paddingTop: '150px'}}>
+                {showContact && (
+                    <EmailSubmit/>
+                )}
             </div>
             <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white'}>
                 <Footer/>

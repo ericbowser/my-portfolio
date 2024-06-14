@@ -6,20 +6,19 @@ const Cards = () => {
         Skills.map((skill, index) => {
             return (
                 <div key={`${index}${skill}`}
-                     className={'m-5 h-full w-full md:w-1/2 lg:w-1/3 dark:bg-gray-800 dark:text-white'}>
+                     className={'w-full w-full md:w-1/2 lg:w-1/3 dark:bg-gray-800 dark:text-white'}>
                     <div
                         className={'rounded-lg md:p-8 transition-all dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl shadow-cyan-500/20 dark:shadow-lg dark:shadow-cyan-500/30 dark:text-white-400 border-2 border-transparent hover:border-current4'}>
-                        <div className={'flex font-bold m-12'}>
+                        <div className={'flex font-bold card-header pb-8'}>
                             {skill.icon !== null ? skill.icon : ''}
-                            <h1 className={'font-bolder text-2xl pl-5'}>{skill.title}</h1>
+                            <h1 className={'font-bolder text-2xl'}>{skill.title}</h1>
+                        </div>
+                        <div style={{height: '200px', paddingTop: '20px'}}>
+                            {skill.description}
                         </div>
                         <div>
-                            <div style={{height: '250px'}}>
-                                {skill.description}
-                            </div>
-                            <div>
 
-                             {/*   {skill.link.map(x => {
+                            {/*   {skill.link.map(x => {
                                     return (
                                         <div
                                             className={'flex items-center justify-start space-x-4 border-t border-gray-200"'}>
@@ -34,7 +33,6 @@ const Cards = () => {
                                         </div>
                                     )
                                 })}*/}
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -26,11 +26,7 @@ const Nav = ({setDarkMode = () => {}, darkMode}) => {
             <section className={'absolute top-2 right-2 m-10 dark:bg-gray-800 dark:text-white'}>
                 <ul>
                     <li>
-
-                    </li>
-                    <li>
-                        <BsFillMoonStarsFill className={'cursor-pointer 2xl'}
-                                             onClick={() => setDarkMode(!darkMode)}/>
+                        <BsFillMoonStarsFill className={'cursor-pointer 2xl'} onClick={() => setDarkMode(!darkMode)}/>
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}

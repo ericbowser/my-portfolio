@@ -7,6 +7,23 @@
     src: url("../public/Burtons.otf")
 }
 
+.card-header {
+    padding: 10px;
+    margin: 13px;
+    border: outset black;
+    border-bottom-color: aliceblue;
+    box-shadow: cyan 2px 2px 2px 2px;
+}
+
+.button-style {
+    background-color: lightblue;
+    height: 35px;
+    width: 75px;
+    box-shadow: cyan 2px 1px 1px 2px;
+    float: right;
+    color: white;
+}
+
 .animate-move {
     width: 30px;
     height: 30px;
@@ -17,13 +34,13 @@
 }
 
 @keyframes example {
-    0%   {background-color:black; left:0px; top:0px;}
-    25%  {background-color:white; left:50px; top:50px;}
-    33%  {background-color:black; left:0px; top:0px;}
-    44%  {background-color:teal; left:-50px; top:50px;}
-    55% {background-color:white; left:-100px; top:10px;}
-    66% {background-color:black; left:-150px; top:20px;}
-    77% {background-color:teal; left:-170px; top:40px;}
-    88% {background-color:white; left:-200px; top:60px;}
-    100% {background-color:black; left:-300px; top:100px;}
+    0%   {background-color:cyan; left:0px; top:0px;}
+    25%  {background-color:teal; left:50px; top:50px;}
+    33%  {background-color:teal; left:0px; top:0px;}
+    44%  {background-color:teal; left:0px; top:150px;}
+    55% {background-color:cyan; left:50px; top:100px;}
+    66% {background-color:cyan; left:100px; top:0px;}
+    77% {background-color:cyan; left:50px; top:50px;}
+    88% {background-color:teal; left:0px; top:100px;}
+    100% {background-color:teal; left:50px; top:100px;}
 }
