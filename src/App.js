@@ -8,13 +8,6 @@ import Nav from "./components/Nav";
 import Cards from "./components/Cards";
 import EmailSubmit from "./components/EmailSubmit";
 
-/*export default function getServerSideProps() {
-    const secretKey = process.env.SMTP_HOST; // Ensure this variable is not prefixed with NEXT_PUBLIC_
-    console.log('Secret Key:', secretKey);
-
-    return { props: { secretKeyShownInConsole: 'hidden' } };
-}*/
-
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [showContact, setShowContact] = useState(false);
@@ -37,11 +30,11 @@ const App = () => {
                         <div className="flex text-center" style={{paddingTop: '150px'}}>
                             {/* Profile Image */}
                             <img
-                                className="mx-auto rounded-full w-64 h-72 object-cover"
+                                className=" rounded-2xl w-80 h-96 object-cover"
                                 src={head2}
                                 alt="E.R.B."
                             />
-                            <ul className={'mt-2 ml-10 font-burtons'}>
+                            <ul className={'mt-8 ml-10 font-burtons size-3 text-xl'}>
                                 <li>React</li>
                                 <li>.NET</li>
                                 <li>C#</li>
@@ -50,7 +43,7 @@ const App = () => {
                             </ul>
                         </div>
                     </div>
-                    <h2 className={'mt-4 text-2xl font-semibold py-2 text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
+                    <h2 className={'mt-8 text-2xl font-semibold py-2 text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
                         Ryan Bowser</h2>
                     <div className={'text-5xl flex justify-center gap-16 p-3 cursor-pointer'}>
                         <a href={'https://github.com/ericbowser/'}>
@@ -63,8 +56,8 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div style={{marginLeft: '15%', marginRight: '15%'}}>
-                        <h2 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons'}>Skills</h2>
+                    <div style={{marginLeft: '5%', marginRight: '5%', padding: '1%'}}>
+                        <h1 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons '}>Skills</h1>
                         <div
                             className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>

@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
 const config = require('dotenv').config();
 
 const port = config.parsed.PORT || 3000
@@ -16,7 +15,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        fallback: {
+     /*   fallback: {
             os: require.resolve("os-browserify/browser"),
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
@@ -25,7 +24,7 @@ module.exports = {
             assert: require.resolve("assert"),
             http: require.resolve("stream-http"),
             stream: require.resolve("stream-browserify")
-        },
+        },*/
         extensions: [".jsx", ".js"]
     },
     module: {
@@ -60,10 +59,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./src/index.html"}),
-        new Dotenv()
+        new HtmlWebpackPlugin({template: "./src/index.html"})
     ],
-    devtool: "eval-source-map",
+    devtool: "eval",
     stats: {
         errorDetails: true,
         warnings: true
@@ -78,8 +76,8 @@ module.exports = {
         {
             hints: false,
             maxEntrypointSize:
-                512000,
+                312000,
             maxAssetSize:
-                512000,
+                312000,
         }
 };

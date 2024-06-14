@@ -3,15 +3,16 @@ import scrum from '../../public/scrum-gpt.png';
 import skills from '../../public/skills_web.jpg';
 import {RiJavascriptLine} from "react-icons/ri";
 import {FaReact} from "react-icons/fa";
-import {PiFileCssBold} from "react-icons/pi";
 import {SiDotnet} from "react-icons/si";
 import {SiGnubash} from "react-icons/si";
-import {TbFileTypeSql} from "react-icons/tb";
-import { SiTeamcity } from "react-icons/si";
+import {SiPostgresql} from "react-icons/si";
+import {PiFileSql} from "react-icons/pi";
+import { SiMicrosoftazure } from "react-icons/si";
+import { PiFileCssLight } from "react-icons/pi";
 
 export const Skills = [
     {
-        title: "JavaScript",
+        title: <p>JavaScript</p>,
         description: (
             <section>
                 Proficient in JavaScript and have lots of experience using NPM and Node.js.
@@ -20,10 +21,10 @@ export const Skills = [
         ),
         image: scrum,
         link: [{}],
-        icon: <RiJavascriptLine size={50} className={'font-extrabold'}/>
+        icon: <RiJavascriptLine size={50} />
     },
     {
-        title: "React",
+        title: <p>React</p>,
         description: (
             <section>
                 Experienced in building single-page applications with React, classes and hooks.
@@ -43,10 +44,10 @@ export const Skills = [
                 url: 'https://github.com/ericbowser/my-portfolio'
             }
         ],
-        icon: <FaReact size={50} className={'font-extrabold'}/>
+        icon: <FaReact size={50} />
     },
     {
-        title: "CSS",
+        title: <p>CSS</p>,
         description: (
             <section>
                 Responsive web design and grid layout systems using Bootstrap, TailwindCSS, and Styled Components.
@@ -55,10 +56,10 @@ export const Skills = [
         ),
         image: skills,
         link: [{}],
-        icon: <PiFileCssBold size={50} className={'font-extrabold'}/>
+        icon: <PiFileCssLight size={50} />
     },
     {
-        title: "DotNet",
+        title: <p>DotNep</p>,
         description: (
             <section>
                 Experienced and proficient using and bootstrapping web / service applications.
@@ -67,10 +68,10 @@ export const Skills = [
         ),
         image: skills,
         link: [{}],
-        icon: <SiDotnet size={50} className={'font-extrabold'}/>
+        icon: <SiDotnet size={50} />
     },
     {
-        title: "Scripting",
+        title: <p>Scripting</p>,
         description: (
             <section>
                 Experienced with Bash and Git Bash shells.
@@ -84,7 +85,7 @@ export const Skills = [
         icon: <SiGnubash size={50}/>
     },
     {
-        title: "CI / CD",
+        title: <p>CI / CD</p>,
         description: (
             <section>
                 Continuous integration using various frameworks like TeamCity Build and Octopus Deploy.
@@ -94,10 +95,10 @@ export const Skills = [
         ),
         image: skills,
         link: [{}],
-        icon: <SiTeamcity size={50}/>
+        icon: <SiMicrosoftazure size={50}/>
     },
     {
-        title: "Data",
+        title: <p>Data</p>,
         description: (
             <section>
                 Proficient and experienced using Microsoft Transact SQL, PostgeSQL, writing stored procedures and
@@ -107,7 +108,12 @@ export const Skills = [
         ),
         image: skills,
         link: [{}],
-        icon: <TbFileTypeSql size={50} className={'font-extrabold'}/>
+        icon: (
+            <span className={'flex'}>
+                <SiPostgresql size={50} />
+                <PiFileSql size={50} />
+            </span>
+        )
     },
 ];
 
