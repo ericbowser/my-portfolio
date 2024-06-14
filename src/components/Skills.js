@@ -1,6 +1,4 @@
 ﻿import React from 'react';
-import scrum from '../../public/scrum-gpt.png';
-import skills from '../../public/skills_web.jpg';
 import {RiJavascriptLine} from "react-icons/ri";
 import {FaReact} from "react-icons/fa";
 import {SiDotnet} from "react-icons/si";
@@ -19,21 +17,21 @@ export const Skills = [
                 Knowledgeable in server-side development with Express.js and RESTful APIs using Node as a back-end.,
             </section>
         ),
-        image: scrum,
+        image: null,
         link: [{}],
         icon: <RiJavascriptLine size={50} />
     },
     {
         title: <p>React</p>,
         description: (
-            <section>
+            <span>
                 Experienced in building single-page applications with React, classes and hooks.
                 Developed, implemented, and tested React components in a component library.
                 React caching libraries such as Redux and React Query.
                 React Router and Next.js app routing.
-            </section>
+            </span>
         ),
-        image: skills,
+        image: null,
         link: [
             {
                 name: 'Card Game',
@@ -54,7 +52,7 @@ export const Skills = [
                 Custom CSS stylesheets and SASS.
             </section>
         ),
-        image: skills,
+        image: null,
         link: [{}],
         icon: <PiFileCssLight size={50} />
     },
@@ -66,7 +64,7 @@ export const Skills = [
                 I have worked extensively with dotnet Standard versions as well as newer dotnet core up to netcore 9.
             </section>
         ),
-        image: skills,
+        image: null,
         link: [{}],
         icon: <SiDotnet size={50} />
     },
@@ -80,7 +78,7 @@ export const Skills = [
                 NPM package manager and build / run scripts.
             </section>
         ),
-        image: skills,
+        image: null,
         link: [{}],
         icon: <SiGnubash size={50}/>
     },
@@ -93,7 +91,7 @@ export const Skills = [
                 that runs automation tests, and runs a build process based on criteria.
             </section>
         ),
-        image: skills,
+        image: null,
         link: [{}],
         icon: <SiMicrosoftazure size={50}/>
     },
@@ -106,7 +104,7 @@ export const Skills = [
                 Experienced with database design and normalization.
             </section>
         ),
-        image: skills,
+        image: null,
         link: [{}],
         icon: (
             <span className={'flex'}>

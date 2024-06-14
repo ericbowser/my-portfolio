@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
-import head2 from '../public/eb-1.jpg';
+import head2 from '../public/skills_web.jpg';
 import Footer from './components/Footer';
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
@@ -30,7 +30,7 @@ const App = () => {
                         <div className="flex text-center" style={{paddingTop: '150px'}}>
                             {/* Profile Image */}
                             <img
-                                className=" rounded-2xl w-80 h-96 object-cover"
+                                className=" rounded-2xl w-80 h-96 object-cover bg-cover bg-center bg-no-repeat"
                                 src={head2}
                                 alt="E.R.B."
                             />
