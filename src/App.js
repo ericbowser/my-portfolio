@@ -56,7 +56,7 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div style={{marginLeft: '5%', marginRight: '5%', padding: '1%'}}>
+                    <div style={{marginLeft: '10%', marginRight: '10%', padding: '5%'}}>
                         <h1 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons '}>Skills</h1>
                         <div
                             className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
