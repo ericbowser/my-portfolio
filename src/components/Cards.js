@@ -23,7 +23,7 @@ const Cards = () => {
                                     borderColor: 'blueviolet',
                                     padding: '25px'
                                 }} 
-                                 className={'md:h-1/2 sm:flex-row letter-spacing: -0.025em font-medium'}>
+                                 className={'sm:flex-row md:w-1/2 letter-spacing: -0.025em font-medium text-xl'}>
                                     {skill.description}
                             </div>
                         </div>
