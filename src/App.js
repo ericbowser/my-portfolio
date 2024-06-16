@@ -52,12 +52,14 @@ const App = () => {
                         <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
                             <AiFillLinkedin/>
                         </a>
-                        <a onClick={() => scrollToPoint(2100)}>
+                        <a onClick={() => scrollToPoint(2600)}>
                             <CgMail/>
                         </a>
                     </div>
-                    <div style={{marginLeft: '10%', marginRight: '10%', padding: '5%'}}>
-                        <h1 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons '}>Skills</h1>
+                    <div style={{marginLeft: '8%', marginRight: '8%', marginTop: '10%'}}>
+                        <h1 className={'text-5xl dark:text-white font-extrabold text-center font-burtons'}>
+                            Skills
+                        </h1>
                         <div
                             className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>

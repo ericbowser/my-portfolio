@@ -57,7 +57,7 @@ export const Skills = [
         icon: <PiFileCssLight size={50} />
     },
     {
-        title: <p>DotNep</p>,
+        title: <p>Dot Net</p>,
         description: (
             <section>
                 Experienced and proficient using and bootstrapping web / service applications.
