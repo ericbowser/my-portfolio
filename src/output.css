@@ -659,10 +659,6 @@ video {
   height: 24rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-28 {
   width: 7rem;
 }
@@ -673,10 +669,6 @@ video {
 
 .w-80 {
   width: 20rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .cursor-pointer {
@@ -959,7 +951,7 @@ video {
 }
 
 .card-header {
-  padding: 10px;
+  padding: 15px;
   margin: 13px;
   border: outset black;
   border-bottom-color: aliceblue;
@@ -976,68 +968,100 @@ video {
 }
 
 .animate-move {
-  width: 30px;
-  height: 30px;
   position: relative;
   border-radius: 100%;
-  animation-name: example;
-  animation-duration: 20s;
+  animation-name: bounce;
+  animation-duration: 8s;
 }
 
-@keyframes example {
+@keyframes bounce {
   0%   {
     background-color:cyan;
-    left:0px;
-    top:0px;
+    left:0;
+    top:0;
   }
 
-  25%  {
-    background-color:teal;
-    left:50px;
-    top:50px;
-  }
+  /* Starting Position */
 
-  33%  {
-    background-color:teal;
-    left:0px;
-    top:0px;
-  }
-
-  44%  {
-    background-color:teal;
-    left:0px;
-    top:150px;
-  }
-
-  55% {
+  10%   {
     background-color:cyan;
-    left:50px;
-    top:100px;
+    left:10px;
+    top:0;
   }
 
-  66% {
+  /* Starting Position */
+
+  20%  {
+    background-color:white;
+    left:0;
+    top:10px;
+  }
+
+  /* Down to bottom */
+
+  30%  {
+    background-color:white;
+    left:10px;
+    top:10px;
+  }
+
+  /* Up to top */
+
+  40%  {
     background-color:cyan;
-    left:100px;
-    top:0px;
+    left:10px;
+    top:20px;
   }
 
-  77% {
+  /* Down to bottom */
+
+  50%  {
     background-color:cyan;
-    left:50px;
-    top:50px;
+    left:0;
+    top:20px;
   }
 
-  88% {
-    background-color:teal;
+  /* Up to top */
+
+  60%  {
+    background-color:white;
+    left:10px;
+    top:20px;
+  }
+
+  /* Up to top */
+
+  70%  {
+    background-color:white;
     left:0px;
-    top:100px;
+    top:20px;
   }
+
+  /* Up to top */
+
+  80%  {
+    background-color:cyan;
+    left:20px;
+    top:20px;
+  }
+
+  /* Up to top */
+
+  90%  {
+    background-color:cyan;
+    left:20px;
+    top:40px;
+  }
+
+  /* Up to top */
 
   100% {
-    background-color:teal;
-    left:50px;
-    top:100px;
+    background-color:white;
+    left:0;
+    top:0;
   }
+
+  /* Return to bottom with slight offset */
 }
 
 .hover\:bg-blue-700:hover {
@@ -1102,20 +1126,28 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:w-1\/2 {
-    width: 50%;
+  .md\:max-h-\[420px\] {
+    max-height: 420px;
+  }
+
+  .md\:min-h-\[380px\] {
+    min-height: 380px;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
   }
 
   .md\:flex-row {
     flex-direction: row;
   }
-
-  .md\:p-8 {
-    padding: 2rem;
-  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:max-h-\[420px\] {
+    max-height: 420px;
+  }
+
   .lg\:w-1\/3 {
     width: 33.333333%;
   }

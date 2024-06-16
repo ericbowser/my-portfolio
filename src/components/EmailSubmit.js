@@ -12,30 +12,7 @@ const EmailSubmit = () => {
 
     useEffect(() => {
         if (submit) {
-            const myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-            /*             axios.post(process.env.SMTP_HOST, {...data})
-                               .then(response => {
-                                   console.log(response);
-                                   if (response?.status === 200) {
-                                       const content = response;
-                                       const res = {
-                                           status: 200,
-                                           data: content?.data.choices[0].message.content,
-                                           thread: content.data.id
-                                       }
-                                   }
-                               });
-                               
-                                   
-                           } else {
-                               console.error(response);
-                               return null;
-                           }
-                       } catch (err) {
-                           console.log(err);
-                           throw err;
-                       }*/
+            
         }
     }, [submit])
 
@@ -48,25 +25,6 @@ const EmailSubmit = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            if (response.ok) {
-                /*
-                                setSubmitted(true);
-                                setFormData({
-                                    name: '',
-                                    email: '',
-                                    message: ''
-                                });
-                */
-            } else {
-                console.error('Failed to submit');
-            }
         } catch (error) {
             console.error('Failed to submit');
         }

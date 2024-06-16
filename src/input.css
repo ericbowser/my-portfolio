@@ -25,22 +25,22 @@
 }
 
 .animate-move {
-    width: 30px;
-    height: 30px;
     position: relative;
     border-radius: 100%;
-    animation-name: example;
-    animation-duration: 20s;
+    animation-name: bounce;
+    animation-duration: 8s;
 }
 
-@keyframes example {
-    0%   {background-color:cyan; left:0px; top:0px;}
-    25%  {background-color:teal; left:50px; top:50px;}
-    33%  {background-color:teal; left:0px; top:0px;}
-    44%  {background-color:teal; left:0px; top:150px;}
-    55% {background-color:cyan; left:50px; top:100px;}
-    66% {background-color:cyan; left:100px; top:0px;}
-    77% {background-color:cyan; left:50px; top:50px;}
-    88% {background-color:teal; left:0px; top:100px;}
-    100% {background-color:teal; left:50px; top:100px;}
+@keyframes bounce {
+    0%   {background-color:cyan; left:0; top:0;}       /* Starting Position */
+    10%   {background-color:cyan; left:10px; top:0;}       /* Starting Position */
+    20%  {background-color:white; left:0; top:10px;}     /* Down to bottom */
+    30%  {background-color:white; left:10px; top:10px;}      /* Up to top */
+    40%  {background-color:cyan; left:10px; top:20px;}     /* Down to bottom */
+    50%  {background-color:cyan; left:0; top:20px;}      /* Up to top */
+    60%  {background-color:white; left:10px; top:20px;}      /* Up to top */
+    70%  {background-color:white; left:0px; top:20px;}      /* Up to top */
+    80%  {background-color:cyan; left:20px; top:20px;}      /* Up to top */
+    90%  {background-color:cyan; left:20px; top:40px;}      /* Up to top */
+    100% {background-color:white; left:0; top:0;}     /* Return to bottom with slight offset */
 }

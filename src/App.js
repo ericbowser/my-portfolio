@@ -27,7 +27,7 @@ const App = () => {
                 <div className={'dark:bg-gray-800 dark:text-white'}>
                     <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
                     <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
-                        <div className="flex text-center" style={{paddingTop: '150px'}}>
+                        <div className="flex text-center" style={{paddingTop: '230px'}}>
                             {/* Profile Image */}
                             <img
                                 className=" rounded-2xl w-80 h-96 object-cover bg-cover bg-center bg-no-repeat"
@@ -56,11 +56,11 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div style={{marginLeft: '8%', marginRight: '8%', marginTop: '10%'}}>
+                    <div style={{marginLeft: '12%', marginRight: '12%', marginTop: '10%'}}>
                         <h1 className={'text-5xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
-                        <div
+                        <div 
                             className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
                         </div>
