@@ -13,8 +13,8 @@ export const Skills = [
         title: <p>JavaScript</p>,
         description: (
             <section>
-                Proficient in JavaScript and have lots of experience using NPM and Node.js.
-                Knowledgeable in server-side development with Express.js and RESTful APIs using Node as a back-end.,
+                Experienced with JavaScript, NPM, and Node.js.
+                Knowledgeable in server-side development with Express.js and RESTful APIs using Node as a back-end.
             </section>
         ),
         image: null,
@@ -60,8 +60,8 @@ export const Skills = [
         title: <p>Dot Net</p>,
         description: (
             <section>
-                Experienced and proficient using and bootstrapping web / service applications.
-                I have worked extensively with dotnet Standard versions as well as newer dotnet core up to netcore 9.
+                Experienced using and bootstrapping web / service applications.
+                I have worked extensively with dotnet standard versions as well as newer dotnet core up to Dotnet Core 9.
             </section>
         ),
         image: null,
@@ -74,8 +74,8 @@ export const Skills = [
             <section>
                 Experienced with Bash and Git Bash shells.
                 I have experience scripting automation build scripts and deploy scripts.
-                Git Bash for source control to GitHub. Also, for front-end JavaScript,
-                NPM package manager and build / run scripts.
+                Git Bash for source control to GitHub. 
+                Also, for front-end JavaScript, NPM package manager and build / run scripts.
             </section>
         ),
         image: null,
@@ -83,12 +83,12 @@ export const Skills = [
         icon: <SiGnubash size={50}/>
     },
     {
-        title: <p>CI / CD</p>,
+        title: <p>CI/CD</p>,
         description: (
             <section>
                 Continuous integration using various frameworks like TeamCity Build and Octopus Deploy.
                 I have also worked with Azure Devops. I have scripted and implemented a build pipeline
-                that runs automation tests, and runs a build process based on criteria.
+                that runs automation tests and runs a build process.
             </section>
         ),
         image: null,
@@ -99,8 +99,8 @@ export const Skills = [
         title: <p>Data</p>,
         description: (
             <section>
-                Proficient and experienced using Microsoft Transact SQL, PostgeSQL, writing stored procedures and
-                user-defined functions.
+                Experienced with Microsoft Transact SQL and PostgeSQL document databases. 
+                Experience writing stored procedures and user-defined functions.
                 Experienced with database design and normalization.
             </section>
         ),
