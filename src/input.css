@@ -41,15 +41,15 @@
 }
 
 @keyframes bounce {
-    0%   {left:600px; top:10px;}       /* Starting Position */
-    10%  {left:900px; top:0;}       /* Starting Position */
-    20%  {left:700px; top:20px;}     /* Down to bottom */
-    30%  {left:800px; top:50px;}      /* Up to top */
-    40%  {left:500px; top:70px;}     /* Down to bottom */
-    50%  {left:400px; top:50px;}      /* Up to top */
-    60%  {left:300px; top:90px;}      /* Up to top */
-    70%  {left:400px; top:60px;}      /* Up to top */
-    80%  {left:500px; top:20px;}      /* Up to top */
-    90%  {left:620px; top:10px;}      /* Up to top */
+    0%   {left:100px; top:10px;}       /* Starting Position */
+    10%  {left:200px; top:0;}       /* Starting Position */
+    20%  {left:300px; top:10px;}     /* Down to bottom */
+    30%  {left:400px; top:20px;}      /* Up to top */
+    40%  {left:500px; top:30px;}     /* Down to bottom */
+    50%  {left:600px; top:40px;}      /* Up to top */
+    60%  {left:800px; top:50px;}      /* Up to top */
+    70%  {left:900px; top:60px;}      /* Up to top */
+    80%  {left:800px; top:70px;}      /* Up to top */
+    90%  {left:620px; top:20px;}      /* Up to top */
     100% {left:0; top:0;}     /* Return to bottom with slight offset */
 }

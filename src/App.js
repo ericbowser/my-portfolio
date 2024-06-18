@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <div className={darkMode ? "dark" : ""}>
-            <div className={'flex dark:bg-gray-800 dark:text-white'}>
+            <div className={'flex dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 <div className={'dark:bg-gray-800 dark:text-white'}>
                     <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
                     <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
@@ -35,7 +35,7 @@ const App = () => {
                                 src={me}
                                 alt="E.R.B."
                             />
-                            <ul className={'mt-8 ml-10 font-burtons size-3 text-xl'}>
+                            <ul className={'mt-8 ml-10 font-burtons size-3 text-xl text-teal-600'}>
                                 <li>React</li>
                                 <li>.NET</li>
                                 <li>C#</li>
@@ -44,17 +44,17 @@ const App = () => {
                             </ul>
                         </div>
                     </div>
-                    <h2 className={'mt-8 text-2xl font-semibold py-2 text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
+                    <h2 className={'mt-2 py-8 text-3xl font-medium  text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
                         Ryan Bowser</h2>
                     <div className={'text-xl flex justify-center gap-16 p-3 cursor-pointer'}>
                         <a href={'https://github.com/ericbowser/'}>
-                            <AiFillGithub/>
+                            <AiFillGithub size={40} color={'brown'}/>
                         </a>
                         <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
-                            <AiFillLinkedin/>
+                            <AiFillLinkedin size={40} color={'brown'}/>
                         </a>
                         <a onClick={() => scrollToPoint(2600)}>
-                            <CgMail/>
+                            <CgMail size={40} color={'brown'}/>
                         </a>
                     </div>
                     <div style={{marginLeft: '3%', marginRight: '3%', marginTop: '8%'}}>
@@ -67,12 +67,12 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <div className={'dark:bg-gray-800 dark:text-white'} style={{paddingTop: '150px'}}>
+            <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'} style={{paddingTop: '150px'}}>
                 {showContact && (
                     <EmailSubmit/>
                 )}
             </div>
-            <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white'}>
+            <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 <Footer/>
             </div>
         </div>
