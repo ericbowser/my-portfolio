@@ -12,24 +12,24 @@ export const Skills = [
     {
         title: <p>JavaScript</p>,
         description: (
-            <section>
+            <p>
                 Experienced with JavaScript, NPM, and Node.js.
                 Knowledgeable in server-side development with Express.js and RESTful APIs using Node as a back-end.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
-        icon: <RiJavascriptLine size={50} />
+        icon: <RiJavascriptLine size={30} color={'teal'}/>
     },
     {
         title: <p>React</p>,
         description: (
-            <span>
+            <p>
                 Experienced in building single-page applications with React, classes and hooks.
                 Developed, implemented, and tested React components in a component library.
                 React caching libraries such as Redux and React Query.
                 React Router and Next.js app routing.
-            </span>
+            </p>
         ),
         image: null,
         link: [
@@ -42,75 +42,75 @@ export const Skills = [
                 url: 'https://github.com/ericbowser/my-portfolio'
             }
         ],
-        icon: <FaReact size={50} />
+        icon: <FaReact size={30} color={'teal'}/>
     },
     {
         title: <p>CSS</p>,
         description: (
-            <section>
+            <p>
                 Responsive web design and grid layout systems using Bootstrap, TailwindCSS, and Styled Components.
                 Custom CSS stylesheets and SASS.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
-        icon: <PiFileCssLight size={50} />
+        icon: <PiFileCssLight size={30} color={'teal'}/>
     },
     {
         title: <p>Dot Net</p>,
         description: (
-            <section>
+            <p>
                 Experienced using and bootstrapping web / service applications.
                 I have worked extensively with dotnet standard versions as well as newer dotnet core up to Dotnet Core 9.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
-        icon: <SiDotnet size={50} />
+        icon: <SiDotnet size={40} color={'teal'}/>
     },
     {
         title: <p>Scripting</p>,
         description: (
-            <section>
+            <p>
                 Experienced with Bash and Git Bash shells.
                 I have experience scripting automation build scripts and deploy scripts.
                 Git Bash for source control to GitHub. 
                 Also, for front-end JavaScript, NPM package manager and build / run scripts.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
-        icon: <SiGnubash size={50}/>
+        icon: <SiGnubash size={30} color={'teal'}/>
     },
     {
         title: <p>CI/CD</p>,
         description: (
-            <section>
+            <p>
                 Continuous integration using various frameworks like TeamCity Build and Octopus Deploy.
                 I have also worked with Azure Devops. I have scripted and implemented a build pipeline
                 that runs automation tests and runs a build process.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
-        icon: <SiMicrosoftazure size={50}/>
+        icon: <SiMicrosoftazure size={30} color={'teal'}/>
     },
     {
         title: <p>Data</p>,
         description: (
-            <section>
+            <p>
                 Experienced with Microsoft Transact SQL and PostgeSQL document databases. 
                 Experience writing stored procedures and user-defined functions.
                 Experienced with database design and normalization.
-            </section>
+            </p>
         ),
         image: null,
         link: [{}],
         icon: (
-            <span className={'flex'}>
-                <SiPostgresql size={50} />
-                <PiFileSql size={50} />
-            </span>
+            <p className={'flex'}>
+                <SiPostgresql size={30} color={'teal'}/>
+                <PiFileSql size={30} color={'purple'}/>
+            </p>
         )
     },
 ];

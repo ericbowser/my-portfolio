@@ -27,26 +27,26 @@ const App = () => {
             <div className={'flex dark:bg-gray-800 dark:text-white'}>
                 <div className={'dark:bg-gray-800 dark:text-white'}>
                     <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
-
-                    <div style={{paddingTop: '180px'}}
-                         className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
-                        <div className="relative">
-                            <div
-                                className="absolute inset-0 bg-blue-500 rounded-full opacity-75 w-84 h-96 -translate-y-4 translate-x-2 "></div>
-                            <img className="relative top-1/2 w-84 h-96 rounded-full border-4 border-white" src={me}
-                                 alt="Profile Image"/>
+                    <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
+                        <div className="flex text-center" style={{paddingTop: '150px'}}>
+                            {/* Profile Image */}
+                            <img
+                                className=" rounded-xl w-30 h-60 object-cover"
+                                src={me}
+                                alt="E.R.B."
+                            />
+                            <ul className={'mt-8 ml-10 font-burtons size-3 text-xl'}>
+                                <li>React</li>
+                                <li>.NET</li>
+                                <li>C#</li>
+                                <li>JavaScript</li>
+                                <li>Node</li>
+                            </ul>
                         </div>
-                       {/* <ul className={'p-10 font-burtons text-xl rounded-md shadow-xl shadow-cyan-600/20'}>
-                            <li>React</li>
-                            <li>.NET</li>
-                            <li>C#</li>
-                            <li>JavaScript</li>
-                            <li>Node</li>
-                        </ul>*/}
                     </div>
                     <h2 className={'mt-8 text-2xl font-semibold py-2 text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
                         Ryan Bowser</h2>
-                    <div className={'text-5xl flex justify-center gap-16 p-3 cursor-pointer'}>
+                    <div className={'text-xl flex justify-center gap-16 p-3 cursor-pointer'}>
                         <a href={'https://github.com/ericbowser/'}>
                             <AiFillGithub/>
                         </a>
@@ -57,8 +57,8 @@ const App = () => {
                             <CgMail/>
                         </a>
                     </div>
-                    <div style={{marginLeft: '6%', marginRight: '6%', marginTop: '10%'}}>
-                        <h1 className={'text-5xl dark:text-white font-extrabold text-center font-burtons'}>
+                    <div style={{marginLeft: '3%', marginRight: '3%', marginTop: '8%'}}>
+                        <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
                         <div className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
