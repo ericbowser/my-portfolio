@@ -11,8 +11,7 @@ const EmailSubmit = () => {
     useEffect(() => {
     }, [name, from, message, subject, emailSent]);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async () => {
         try {
             const emailParams = {
                 from,
@@ -32,7 +31,7 @@ const EmailSubmit = () => {
 
     return (
         <div className="pt-20 text-center font-burtons">
-            <form className="dark:bg-gray-800 dark:text-white shadow-md rounded">
+            <form className="dark:bg-gray-800 dark:text-white shadow-md rounded" onSubmit={handleSubmit}>
                 <h2 className="text-2xl font-bold mb-6">Email Me</h2>
                 <div className="mb-4 dark:text-white">
                     <label className="block text-sm font-bold mb-2"

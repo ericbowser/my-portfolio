@@ -22,13 +22,15 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
             </div>
             <div className={'dark:bg-gray-800 dark:text-white text-center'}>
                 <div onClick={scrollTo}>
-                    <img src={pi}
+                 {/*   <img src={pi}
                          alt={'raspi overlay'}
                          className={'animate-move z-40 blur-sm'}
                          width={'25px'}
                          height={'auto'}
-                    />
+                    />*/}
+{/*
                     <FaRaspberryPi size={30} className={'animate-move z-40'}/>
+*/}
                 </div>
             </div>
             <section className={'absolute top-2 right-2 m-10 dark:bg-gray-800 dark:text-white'}>
