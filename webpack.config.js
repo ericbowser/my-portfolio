@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require('dotenv').config();
+const Dotenv = require('dotenv-webpack');
 
 const port = config.parsed.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
@@ -59,9 +60,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./src/index.html"})
+        new HtmlWebpackPlugin({template: "./src/index.html"}),
+        new Dotenv()
     ],
-    devtool: "eval",
+    devtool: "source-map",
     stats: {
         errorDetails: true,
         warnings: true
