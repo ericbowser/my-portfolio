@@ -13,6 +13,7 @@ async function sendEmail(emailParams = {}) {
             },
             {
                 headers: {
+                    'Access-Control-Allow-Origin': '*',
                     'Content-Type': 'application/json',
                 }
             }
