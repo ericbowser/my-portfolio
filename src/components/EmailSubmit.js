@@ -11,7 +11,8 @@ const EmailSubmit = () => {
     useEffect(() => {
     }, [name, from, message, subject, emailSent]);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         try {
             const emailParams = {
                 from,
@@ -79,7 +80,7 @@ const EmailSubmit = () => {
                         rows={10}
                         placeholder="Email Message"/>
                 </div>
-                <div>
+                <div className={'pb-28'}>
                     <button onClick={handleSubmit}
                             className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             type="button">
@@ -87,7 +88,7 @@ const EmailSubmit = () => {
                     </button>
                 </div>
                 {emailSent && (
-                    <div className={'text-green-400 font-bold pt-3'}>
+                    <div className={'text-green-400 font-bold text-2xl'}>
                         <p>Email Sent!</p>
                     </div>
                 )}

@@ -53,7 +53,7 @@ const App = () => {
                         <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
                             <AiFillLinkedin size={40} color={'brown'}/>
                         </a>
-                        <a onClick={() => scrollToPoint(2600)}>
+                        <a onClick={() => scrollToPoint(2050)}>
                             <CgMail size={40} color={'brown'}/>
                         </a>
                     </div>
