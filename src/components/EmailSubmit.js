@@ -12,7 +12,9 @@ const EmailSubmit = () => {
     }, [name, from, message, subject, emailSent]);
 
     const handleSubmit = async (event) => {
+/*
         event.preventDefault();
+*/
         try {
             const emailParams = {
                 from,
