@@ -1,5 +1,6 @@
 ﻿import React, {useState, useEffect} from "react";
 import emailSubmit from '../api/emailApi';
+import Button from 'react-bootstrap/Button';
 
 const EmailSubmit = () => {
     const [emailSent, setEmailSent] = useState(false);
@@ -83,11 +84,11 @@ const EmailSubmit = () => {
                         placeholder="Email Message"/>
                 </div>
                 <div className={'pb-28'}>
-                    <button onClick={handleSubmit}
+                    <Button onClick={handleSubmit}
                             className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             type="button">
                         Submit Email
-                    </button>
+                    </Button>
                 </div>
                 {emailSent && (
                     <div className={'text-green-400 font-bold text-2xl'}>
