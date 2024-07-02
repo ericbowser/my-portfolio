@@ -32,7 +32,7 @@ const EmailSubmit = () => {
 
     return (
         <div className="pt-20 text-center font-burtons">
-            <form className="dark:bg-gray-800 dark:text-white shadow-md rounded" onSubmit={handleSubmit}>
+            <div className="pb-28 dark:bg-gray-800 dark:text-white">
                 <h2 className="text-2xl font-bold mb-6">Email Me</h2>
                 <div className="mb-4 dark:text-white">
                     <label className="block text-sm font-bold mb-2"
@@ -69,30 +69,28 @@ const EmailSubmit = () => {
                         type="text"
                         placeholder="Subject"/>
                 </div>
-                <div className="mb-6">
+                <div className="dark:text-white">
                     <label className="block text-sm font-bold mb-2" htmlFor="message">
                         Message
                     </label>
                     <textarea
                         onChange={event => setMessage(event.target.value)}
-                        className="shadow appearance-none border rounded w-64 py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded  w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-10"
                         id="message"
                         rows={10}
                         placeholder="Email Message"/>
                 </div>
-                <div className={'pb-28'}>
-                    <Button onClick={handleSubmit}
-                            className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="button">
+                <div>
+                    <button className={'bg-yellow-500 text-gray-700 p-3 cursor-pointer'} onClick={handleSubmit}>
                         Submit Email
-                    </Button>
+                    </button>
                 </div>
                 {emailSent && (
                     <div className={'text-green-400 font-bold text-2xl'}>
                         <p>Email Sent!</p>
                     </div>
                 )}
-            </form>
+            </div>
         </div>
     )
 }

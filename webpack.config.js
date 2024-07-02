@@ -72,7 +72,7 @@ module.exports = {
             project: "javascript-react"
         })
     ],
-    devtool: "source-map",
+    devtool: "eval-source-map",
     stats: {
         errorDetails: true,
         warnings: true
