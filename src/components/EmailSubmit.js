@@ -12,10 +12,7 @@ const EmailSubmit = () => {
     useEffect(() => {
     }, [name, from, message, subject, emailSent]);
 
-    const handleSubmit = async (event) => {
-/*
-        event.preventDefault();
-*/
+    const handleSubmit = async () => {
         try {
             const emailParams = {
                 from,

@@ -3,6 +3,7 @@ import {BsFillMoonStarsFill} from "react-icons/bs";
 import {animateScroll as scroll} from "react-scroll";
 import {FaRaspberryPi} from "react-icons/fa6";
 import pi from '../../public/pi.png';
+import ebcv from '../../public/erb_cv.docx';
 
 const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
     const scrollTo = () => {
@@ -41,7 +42,7 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}
-                           href={'./E.R.B-Resume-2024.docx'} download>Resume
+                           href={ebcv} download>Resume
                         </a>
                     </li>
                 </ul>

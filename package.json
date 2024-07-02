@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "webpack-dev-server",
     "webpack:prod": "webpack-dev-server --mode=production",
     "webpack:dev": "webpack-dev-server --mode=development",
     "build": "webpack build --mode=production && npm run tail",
@@ -11,6 +12,8 @@
     "env": "npx dotenv-vault@latest pull"
   },
   "dependencies": {
+    "@sentry/react": "^8.13.0",
+    "@sentry/webpack-plugin": "^2.20.1",
     "axios": "^1.7.2",
     "gmail-send": "^1.8.14",
     "react": "^18",

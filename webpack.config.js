@@ -1,3 +1,7 @@
+const {
+    sentryWebpackPlugin
+} = require("@sentry/webpack-plugin");
+
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require('dotenv').config();
@@ -38,7 +42,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|docx)$/i,
                 loader: 'file-loader',
                 options: {
                     bypassOnDebug: true, // webpack@1.x
@@ -61,7 +65,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({template: "./src/index.html"}),
-        new Dotenv()
+        new Dotenv(),
+        sentryWebpackPlugin({
+            authToken: process.env.SENTRY_AUTH_TOKEN,
+            org: "self-xah",
+            project: "javascript-react"
+        })
     ],
     devtool: "source-map",
     stats: {

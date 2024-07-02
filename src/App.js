@@ -1,26 +1,27 @@
 import React, {useEffect, useState} from "react";
 import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {CgMail} from "react-icons/cg";
-import {animateScroll as scroll} from 'react-scroll';
 import me from '../public/erb.jpg';
-import backdrop from '../public/backdrop.png';
 import Footer from './components/Footer';
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
 import EmailSubmit from "./components/EmailSubmit";
+import {Link, Element, scroller} from 'react-scroll';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [showContact, setShowContact] = useState(false);
-    const [page, setPage] = useState('/');
+    const scrollToElement = () => {
+        scroller.scrollTo('EmailSubmit', {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
+    };
 
     useEffect(() => {
-    }, [page, showContact]);
-
-    const scrollToPoint = (to = 0) => {
-        scroll.scrollTo(to);
-        setShowContact(true);
-    }
+        scrollToElement();
+    }, [showContact]);
 
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -53,15 +54,18 @@ const App = () => {
                         <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
                             <AiFillLinkedin size={40} color={'brown'}/>
                         </a>
-                        <a onClick={() => scrollToPoint(2050)}>
-                            <CgMail size={40} color={'brown'}/>
-                        </a>
+                        <Element to={"EmailSubmit"} smooth={true} duration={500}>
+                            <a onClick={() => setShowContact(true)}>
+                                <CgMail size={40} color={'brown'}/>
+                            </a>
+                        </Element>
                     </div>
                     <div style={{marginLeft: '15%', marginRight: '15%', marginTop: '8%'}}>
                         <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
-                        <div className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                        <div
+                            className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
                         </div>
                     </div>
@@ -69,7 +73,9 @@ const App = () => {
             </div>
             <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'} style={{paddingTop: '150px'}}>
                 {showContact && (
-                    <EmailSubmit/>
+                    <Element name="EmailSubmit" className="element">
+                        <EmailSubmit/>
+                    </Element>
                 )}
             </div>
             <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white bg-yellow-50'}>
