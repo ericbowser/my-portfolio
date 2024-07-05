@@ -29,8 +29,7 @@ const App = () => {
                 <div className={'dark:bg-gray-800 dark:text-white'}>
                     <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
                     <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
-                        <div className="flex text-center" style={{paddingTop: '150px'}}>
-                            {/* Profile Image */}
+                        <div className="flex text-center pt-36">
                             <img
                                 className=" rounded-xl w-30 h-60 object-cover"
                                 src={me}
@@ -60,25 +59,24 @@ const App = () => {
                             </a>
                         </Element>
                     </div>
-                    <div style={{marginLeft: '15%', marginRight: '15%', marginTop: '8%'}}>
+                    <div className={'ml-6%'} style={{marginLeft: '6%', marginRight: '6%', marginTop: '4%'}}>
                         <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
-                        <div
-                            className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                        <div className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'} style={{paddingTop: '150px'}}>
+            <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 {showContact && (
                     <Element name="EmailSubmit" className="element">
                         <EmailSubmit/>
                     </Element>
                 )}
             </div>
-            <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white bg-yellow-50'}>
+            <div className={'fixed-bottom dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 <Footer/>
             </div>
         </div>
