@@ -44,6 +44,13 @@ const App = () => {
                             </ul>
                         </div>
                     </div>
+                    <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'}>
+                        {showContact && (
+                            <Element name="EmailSubmit" className="element">
+                                <EmailSubmit/>
+                            </Element>
+                        )}
+                    </div>
                     <h2 className={'mt-2 py-8 text-3xl font-medium  text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
                         Ryan Bowser</h2>
                     <div className={'text-xl flex justify-center gap-16 p-3 cursor-pointer'}>
@@ -63,18 +70,12 @@ const App = () => {
                         <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
-                        <div className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                        <div
+                            className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                             <Cards/>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={'dark:bg-gray-800 dark:text-white bg-yellow-50'}>
-                {showContact && (
-                    <Element name="EmailSubmit" className="element">
-                        <EmailSubmit/>
-                    </Element>
-                )}
             </div>
             <div className={'fixed-bottom dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 <Footer/>

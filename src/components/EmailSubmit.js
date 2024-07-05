@@ -81,7 +81,7 @@ const EmailSubmit = () => {
                             placeholder="Email Message"/>
                     </div>
                     <div className={'pt-3'}>
-                        <button className={'bg-yellow-800 text-gray-700 pointer-events-auto p-3 cursor-pointer z-50'} type={'submit'}>
+                        <button className={'bg-green-400 text-gray-700 pointer-events-auto p-3 cursor-pointer z-50'} type={'submit'}>
                             Submit Email
                         </button>
                     </div>

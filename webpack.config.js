@@ -6,9 +6,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const port = config.parsed.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
 
-const {
+/*const {
     sentryWebpackPlugin
-} = require("@sentry/webpack-plugin");
+} = require("@sentry/webpack-plugin");*/
 
 
 console.log('port: ', port);
@@ -68,11 +68,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({template: "./src/index.html"}),
         new Dotenv(),
-        sentryWebpackPlugin({
+      /*  sentryWebpackPlugin({
             authToken: process.env.SENTRY_AUTH_TOKEN,
             org: "self-xah",
             project: "javascript-react"
-        }),
+        }),*/
         new BundleAnalyzerPlugin()
     ],
     devtool: "source-map",
