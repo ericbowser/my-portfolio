@@ -648,6 +648,10 @@ video {
   margin-left: 2.5rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -658,10 +662,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
 }
 
 .block {
@@ -822,10 +822,6 @@ video {
   padding: 2.5rem;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -860,14 +856,6 @@ video {
 
 .pt-3 {
   padding-top: 0.75rem;
-}
-
-.pt-96 {
-  padding-top: 24rem;
-}
-
-.pt-28 {
-  padding-top: 7rem;
 }
 
 .pt-36 {

@@ -4,6 +4,7 @@ module.exports = {
     content: [
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/*.{js,ts,jsx,tsx,mdx}",
+        "./src/api/*.{js}",
         "./src/*.{js,ts,jsx,tsx,mdx}",
         "./*.{js,ts,jsx,tsx,mdx}"
     ],
