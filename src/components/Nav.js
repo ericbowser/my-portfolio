@@ -1,6 +1,8 @@
 ﻿import React from 'react';
 import {BsFillMoonFill} from "../../node_modules/react-icons/bs/index.mjs";
+import {FaRaspberryPi} from "../../node_modules/react-icons/fa6/index.mjs";
 import {animateScroll as scroll} from "react-scroll";
+import pi from '../../public/pi.png';
 import ebcv from '../../public/erb_cv.docx';
 
 const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
@@ -21,15 +23,15 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
             </div>
             <div className={'dark:bg-gray-800 dark:text-white text-center'}>
                 <div onClick={scrollTo}>
-                 {/*   <img src={pi}
+                    <img src={pi}
                          alt={'raspi overlay'}
                          className={'animate-move z-40 blur-sm'}
                          width={'25px'}
                          height={'auto'}
-                    />*/}
-{/*
+                    />
+
                     <FaRaspberryPi size={30} className={'animate-move z-40'}/>
-*/}
+
                 </div>
             </div>
             <section className={'absolute top-2 right-2 m-10 dark:bg-gray-800 dark:text-white'}>
