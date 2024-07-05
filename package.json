@@ -9,7 +9,8 @@
     "build": "webpack build --mode=production && npm run tail",
     "start": "webpack-dev-server",
     "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "env": "npx dotenv-vault@latest pull"
+    "env": "npx dotenv-vault@latest pull",
+    "clean": "rm node_modules -R && npm install"
   },
   "dependencies": {
     "@sentry/react": "^8.13.0",
@@ -39,16 +40,12 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "https-browserify": "^1.0.0",
-    "image-webpack-loader": "^8.1.0",
-    "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
-    "postcss": "^8.4.38",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.1",
     "url": "^0.11.3",
     "webpack": "^5.91.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   }

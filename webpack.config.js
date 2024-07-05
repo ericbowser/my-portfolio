@@ -6,6 +6,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require('dotenv').config();
 const Dotenv = require('dotenv-webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const port = config.parsed.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
@@ -21,14 +22,10 @@ module.exports = {
     },
     resolve: {
         fallback: {
-            os: require.resolve("os-browserify/browser"),
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
             https: require.resolve("https-browserify"),
-            url: require.resolve("url"),
-            assert: require.resolve("assert"),
-            http: require.resolve("stream-http"),
-            stream: require.resolve("stream-browserify")
+            assert: require.resolve("assert")
         },
         extensions: [".jsx", ".js"]
     },
@@ -70,7 +67,8 @@ module.exports = {
             authToken: process.env.SENTRY_AUTH_TOKEN,
             org: "self-xah",
             project: "javascript-react"
-        })
+        }),
+        new BundleAnalyzerPlugin(),
     ],
     devtool: "eval-source-map",
     stats: {
@@ -83,12 +81,33 @@ module.exports = {
         port: process.env.PORT,
         host: 'localhost'
     },
+    optimization: {
+   /*     splitChunks: {
+            chunks: 'all',
+            minSize: 20000,     // Minimum size for a chunk to be generated
+            maxSize: 70000,     // Maximum size for a chunk to be generated
+            minChunks: 1,       // Minimum number of chunks that must share a module before splitting
+            automaticNameDelimiter: '~', // Delimiter for naming chunks
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+            },
+        },*/
+    },
     performance:
         {
             hints: false,
             maxEntrypointSize:
-                312000,
+                412000,
             maxAssetSize:
-                312000,
+                412000,
         }
 };
