@@ -59,7 +59,7 @@ const App = () => {
                             </a>
                         </Element>
                     </div>
-                    <div className={'ml-6%'} style={{marginLeft: '6%', marginRight: '6%', marginTop: '4%'}}>
+                    <div style={{marginLeft: '6%', marginRight: '6%', marginTop: '4%'}}>
                         <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                             Skills
                         </h1>
