@@ -21,7 +21,7 @@ const Cards = () => {
                                     borderColor: 'beige',
                                     boxShadow: 'teal 2px 5px 5px 2px'
                                 }} 
-                                 className={'sm:flex-row font-medium text-xl p-10 bg-teal-50 dark:bg-gray-800 dark:text-white'}>
+                                 className={'sm:flex-row md:flex-row font-medium text-xl p-10 bg-teal-50 dark:bg-gray-800 dark:text-white'}>
                                     {skill.description}
                             </div>
                         </div>
