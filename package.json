@@ -9,7 +9,7 @@
     "webpack:dev": "webpack-dev-server --mode=development",
     "build": "webpack build --mode=production && npm run tail",
     "start": "webpack-dev-server",
-    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css",
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "env": "npx dotenv-vault@latest pull",
     "clean": "rm node_modules -R && npm install"
   },

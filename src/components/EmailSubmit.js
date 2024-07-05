@@ -37,24 +37,22 @@ const EmailSubmit = () => {
             <div className="pb-28 dark:bg-gray-800 dark:text-white">
                 <h2 className="text-2xl font-bold mb-6">Email Me</h2>
                 <Form className="mb-4 dark:text-white" onSubmit={handleSubmit}>
-                    <label className="block text-sm font-bold mb-2"
-                           htmlFor="name">
+                    <label className="block text-sm font-bold mb-2" htmlFor="name">
                         Name
                     </label>
                     <input
                         onChange={event => setName(event.target.value)}
-                        className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="name"
                         type="text"
                         placeholder="Name"/>
                     <div className="mb-4 dark:text-white">
-                        <label className="block text-sm font-bold mb-2"
-                               htmlFor="name">
+                        <label className="block text-sm font-bold mb-2 mt-4" htmlFor="name">
                             Email
                         </label>
                         <input
                             onChange={event => setFrom(event.target.value)}
-                            className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="email"
                             type="email"
                             placeholder="Email"/>
@@ -65,7 +63,7 @@ const EmailSubmit = () => {
                         </label>
                         <input
                             onChange={event => setSubject(event.target.value)}
-                            className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="subject"
                             type="text"
                             placeholder="Subject"/>
@@ -76,7 +74,7 @@ const EmailSubmit = () => {
                         </label>
                         <textarea
                             onChange={event => setMessage(event.target.value)}
-                            className="shadow appearance-none border rounded  w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-10"
+                            className="shadow appearance-none border rounded  w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-10"
                             id="message"
                             rows={10}
                             placeholder="Email Message"/>
