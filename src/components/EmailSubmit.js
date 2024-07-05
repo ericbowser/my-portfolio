@@ -12,7 +12,8 @@ const EmailSubmit = () => {
     useEffect(() => {
     }, [name, from, message, subject, emailSent]);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         try {
             const emailParams = {
                 from,
@@ -34,7 +35,7 @@ const EmailSubmit = () => {
         <div className="pt-20 text-center font-burtons">
             <div className="pb-28 dark:bg-gray-800 dark:text-white">
                 <h2 className="text-2xl font-bold mb-6">Email Me</h2>
-                <div className="mb-4 dark:text-white">
+                <form className="mb-4 dark:text-white" onSubmit={handleSubmit}>
                     <label className="block text-sm font-bold mb-2"
                            htmlFor="name">
                         Name
@@ -45,46 +46,46 @@ const EmailSubmit = () => {
                         id="name"
                         type="text"
                         placeholder="Name"/>
-                </div>
-                <div className="mb-4 dark:text-white">
-                    <label className="block text-sm font-bold mb-2"
-                           htmlFor="name">
-                        Email
-                    </label>
-                    <input
-                        onChange={event => setFrom(event.target.value)}
-                        className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="email"
-                        type="email"
-                        placeholder="Email"/>
-                </div>
-                <div className="mb-4">
-                    <label className="block text-sm font-bold mb-2" htmlFor="subject">
-                        Subject
-                    </label>
-                    <input
-                        onChange={event => setSubject(event.target.value)}
-                        className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="subject"
-                        type="text"
-                        placeholder="Subject"/>
-                </div>
-                <div className="dark:text-white">
-                    <label className="block text-sm font-bold mb-2" htmlFor="message">
-                        Message
-                    </label>
-                    <textarea
-                        onChange={event => setMessage(event.target.value)}
-                        className="shadow appearance-none border rounded  w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-10"
-                        id="message"
-                        rows={10}
-                        placeholder="Email Message"/>
-                </div>
-                <div>
-                    <button className={'bg-yellow-500 text-gray-700 p-3 cursor-pointer'} onClick={handleSubmit}>
-                        Submit Email
-                    </button>
-                </div>
+                    <div className="mb-4 dark:text-white">
+                        <label className="block text-sm font-bold mb-2"
+                               htmlFor="name">
+                            Email
+                        </label>
+                        <input
+                            onChange={event => setFrom(event.target.value)}
+                            className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="email"
+                            type="email"
+                            placeholder="Email"/>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-sm font-bold mb-2" htmlFor="subject">
+                            Subject
+                        </label>
+                        <input
+                            onChange={event => setSubject(event.target.value)}
+                            className="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="subject"
+                            type="text"
+                            placeholder="Subject"/>
+                    </div>
+                    <div className="dark:text-white">
+                        <label className="block text-sm font-bold mb-2" htmlFor="message">
+                            Message
+                        </label>
+                        <textarea
+                            onChange={event => setMessage(event.target.value)}
+                            className="shadow appearance-none border rounded  w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-10"
+                            id="message"
+                            rows={10}
+                            placeholder="Email Message"/>
+                    </div>
+                    <div className={'pt-3'}>
+                        <button className={'bg-yellow-500 text-gray-700 p-3 cursor-pointer'} type={'submit'}>
+                            Submit Email
+                        </button>
+                    </div>
+                </form>
                 {emailSent && (
                     <div className={'text-green-400 font-bold text-2xl'}>
                         <p>Email Sent!</p>
