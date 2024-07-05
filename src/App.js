@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
-import {CgMail} from "react-icons/cg";
+import {AiFillGithub, AiFillLinkedin} from "../node_modules/react-icons/ai/index.mjs";
+import {CgMail} from "../node_modules/react-icons/cg/index.mjs";
 import me from '../public/erb.jpg';
 import Footer from './components/Footer';
 import Nav from "./components/Nav";
 import Cards from "./components/Cards";
 import EmailSubmit from "./components/EmailSubmit";
-import {Link, Element, scroller} from 'react-scroll';
+import {Element, scroller} from 'react-scroll';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);

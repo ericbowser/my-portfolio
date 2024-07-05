@@ -1,8 +1,6 @@
 ﻿import React from 'react';
-import {BsFillMoonStarsFill} from "react-icons/bs";
+import {BsFillMoonFill} from "../../node_modules/react-icons/bs/index.mjs";
 import {animateScroll as scroll} from "react-scroll";
-import {FaRaspberryPi} from "react-icons/fa6";
-import pi from '../../public/pi.png';
 import ebcv from '../../public/erb_cv.docx';
 
 const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
@@ -37,7 +35,7 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
             <section className={'absolute top-2 right-2 m-10 dark:bg-gray-800 dark:text-white'}>
                 <ul>
                     <li>
-                        <BsFillMoonStarsFill className={'cursor-pointer xl'} size={20}
+                        <BsFillMoonFill className={'cursor-pointer xl'} size={20}
                                              onClick={() => setDarkMode(!darkMode)}/>
                     </li>
                     <li>

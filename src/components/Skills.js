@@ -1,12 +1,8 @@
 ﻿import React from 'react';
-import {RiJavascriptLine} from "react-icons/ri";
-import {FaReact} from "react-icons/fa";
-import {SiDotnet} from "react-icons/si";
-import {SiGnubash} from "react-icons/si";
-import {SiPostgresql} from "react-icons/si";
-import {PiFileSql} from "react-icons/pi";
-import { SiMicrosoftazure } from "react-icons/si";
-import { PiFileCssLight } from "react-icons/pi";
+import {RiJavascriptLine} from "../../node_modules/react-icons/ri/index.mjs";
+import {FaReact} from "../../node_modules/react-icons/fa/index.mjs";
+import {SiDotnet, SiGnubash, SiPostgresql, SiMicrosoftazure} from "../../node_modules/react-icons/si/index.mjs";
+import {PiFileSql, PiFileCssLight} from "../../node_modules/react-icons/pi/index.mjs";
 
 export const Skills = [
     {

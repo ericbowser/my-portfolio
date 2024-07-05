@@ -14,18 +14,23 @@ const environment = process.env.NODE_ENV || 'production';
 console.log('port: ', port);
 console.log('env: ', environment);
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        card: './src/components/Cards.js',
+        nav: './src/components/Nav.js',
+        skills: './src/components/Skills.js'
+    },
     mode: environment,
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'build')
     },
     resolve: {
         fallback: {
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
             https: require.resolve("https-browserify"),
-            assert: require.resolve("assert")
+            assert: require.resolve("assert"),
         },
         extensions: [".jsx", ".js"]
     },
@@ -82,7 +87,7 @@ module.exports = {
         host: 'localhost'
     },
     optimization: {
-   /*     splitChunks: {
+        splitChunks: {
             chunks: 'all',
             minSize: 20000,     // Minimum size for a chunk to be generated
             maxSize: 70000,     // Maximum size for a chunk to be generated
@@ -100,7 +105,7 @@ module.exports = {
                     reuseExistingChunk: true,
                 },
             },
-        },*/
+        },
     },
     performance:
         {

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
+    "server": "build && tail && ngr",
     "webpack:prod": "webpack-dev-server --mode=production",
     "webpack:dev": "webpack-dev-server --mode=development",
     "build": "webpack build --mode=production && npm run tail",
