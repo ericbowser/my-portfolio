@@ -31,7 +31,7 @@ export const Skills = [
         link: [
             {
                 name: 'Card Game',
-                url: 'https://github.com/ericbowser/CardGame'
+                url: 'https://cardgame-3bx.pages.dev/'
             },
             {
                 name: 'My Portfolio',

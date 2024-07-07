@@ -17,18 +17,15 @@ const Cards = () => {
                                 </div>
                             </div>
                             <div style={{
-                                    border: "inset",
-                                    borderColor: 'beige',
-                                    boxShadow: 'teal 2px 5px 5px 2px'
-                                }} 
+                                border: "inset",
+                                borderColor: 'beige',
+                                boxShadow: 'teal 2px 5px 5px 2px'
+                            }}
                                  className={'sm:flex-row md:flex-row font-medium text-xl p-10 bg-teal-50 dark:bg-gray-800 dark:text-white'}>
-                                    {skill.description}
+                                {skill.description}
                             </div>
-                        </div>
-
-                        <div>
-
-                            {/*   {skill.link.map(x => {
+                            <div className={'pt-6 text-center justify-center text-xl text-rose-800'}>
+                                {skill.link.map(x => {
                                     return (
                                         <div
                                             className={'flex items-center justify-start space-x-4 border-t border-gray-200"'}>
@@ -42,7 +39,8 @@ const Cards = () => {
                                             </a>
                                         </div>
                                     )
-                                })}*/}
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>

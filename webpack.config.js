@@ -73,9 +73,13 @@ module.exports = {
             org: "self-xah",
             project: "javascript-react"
         }),*/
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerHost: '127.0.0.1',
+            analyzerPort: 8887  // Use a different port for each instance
+        })
     ],
-    devtool: "source-map",
+    devtool: "eval-source-map",
     stats: {
         errorDetails: true,
         warnings: true

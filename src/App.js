@@ -21,7 +21,9 @@ const App = () => {
     };
 
     useEffect(() => {
-        scrollToElement();
+        if (showContact) {
+            scrollToElement();
+        }
     }, [showContact]);
 
     return (
@@ -67,19 +69,18 @@ const App = () => {
                                 </a>
                             </Element>
                         </div>
-                        <div className={'ml-32 mr-32 sm:mx-6 md:mx-12'}>
+                        <div className={'xsm:ml-6 xsm:mr-6 xl:ml-28 xl:mr-28 lg:ml-28 lg:mr-28 sm:ml-20 sm:mr-20 md:mr-32 md:ml-32'}>
                             <h1 className={'text-2xl dark:text-white font-extrabold text-center font-burtons'}>
                                 Skills
                             </h1>
-                            <div
-                                className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
+                            <div className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
                                 <Cards/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className={'fixed-bottom pt-96 dark:bg-gray-800 dark:text-white bg-yellow-50'}>
+            <div className={'fixed-bottom pt-32 pb-10 dark:bg-gray-800 dark:text-white bg-yellow-50'}>
                 <Footer/>
             </div>
         </div>

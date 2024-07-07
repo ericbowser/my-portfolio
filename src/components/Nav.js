@@ -11,8 +11,7 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
     };
 
     return (
-        <nav
-            className={'bg-red-50 dark:bg-gray-800 dark:text-white dark:backdrop-blur-lg fixed top-0 left-0 right-0 backdrop-blur-lg bg-red-50/30 border-b border-gray-200 p-10'}>
+        <nav className={'bg-red-50 dark:bg-gray-800 dark:text-white dark:backdrop-blur-lg fixed top-0 left-0 right-0 backdrop-blur-lg bg-red-50/30 border-b border-gray-200 p-10 mb-16'}>
             <div className={'top-2 left-2 dark:bg-gray-800 dark:text-white'}>
                 <h1 className={'text-lg'}>
                     Developed By:
