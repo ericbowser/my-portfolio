@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import {BsFillMoonFill} from "../../node_modules/react-icons/bs/index.mjs";
 import {FaRaspberryPi} from "../../node_modules/react-icons/fa6/index.mjs";
+import { PiWarningDuotone } from "../../node_modules/react-icons/pi/index.mjs";
 import {animateScroll as scroll} from "react-scroll";
 import pi from '../../public/pi.png';
 import ebcv from '../../public/erb_cv.docx';
@@ -22,14 +23,20 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
             </div>
             <div className={'dark:bg-gray-800 dark:text-white text-center'}>
                 <div onClick={scrollTo}>
+                    <img src={PiWarningDuotone}
+                         alt={'under construction'}
+                         className={'absolute left-0 top-2 animate-move z-50 ml-24'}
+                         width={'auto'}
+                         height={'auto'}
+                    />
                     <img src={pi}
                          alt={'raspi overlay'}
-                         className={'animate-move z-40 blur-sm'}
+                         className={'animate-move z-10 blur-sm'}
                          width={'25px'}
                          height={'auto'}
                     />
 
-                    <FaRaspberryPi size={30} className={'animate-move z-40'}/>
+                    <FaRaspberryPi size={30} className={'animate-move z-50'}/>
 
                 </div>
             </div>
@@ -37,7 +44,7 @@ const Nav = ({ setDarkMode = () => { }, darkMode, classes = '' }) => {
                 <ul>
                     <li>
                         <BsFillMoonFill className={'cursor-pointer xl'} size={20}
-                                             onClick={() => setDarkMode(!darkMode)}/>
+                                        onClick={() => setDarkMode(!darkMode)}/>
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}
