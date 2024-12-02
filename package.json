@@ -11,7 +11,7 @@
     "env": "npx dotenv-vault@latest pull"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "dotenv-webpack": "^8.1.0",
     "gmail-send": "^1.8.14",
     "react": "^18",
