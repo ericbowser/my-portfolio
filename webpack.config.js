@@ -1,15 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const config = require('dotenv').config();
 const Dotenv = require('dotenv-webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const port = config.parsed.PORT || 3000
+const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
 
 /*const {
     sentryWebpackPlugin
 } = require("@sentry/webpack-plugin");*/
-
 
 console.log('port: ', port);
 console.log('env: ', environment);
