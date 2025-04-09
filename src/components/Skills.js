@@ -7,11 +7,12 @@ import {SiDotnet} from "react-icons/si";
 import {SiGnubash} from "react-icons/si";
 import {SiPostgresql} from "react-icons/si";
 import {PiFileSql} from "react-icons/pi";
-import { SiMicrosoftazure } from "react-icons/si";
+import { SiMicrostrategy } from "react-icons/si";
 import { PiFileCssLight } from "react-icons/pi";
 
 export const Skills = [
     {
+      key: 'JavaScript',
         title: <p>JavaScript</p>,
         description: (
             <section>
@@ -24,6 +25,7 @@ export const Skills = [
         icon: <RiJavascriptLine size={50} />
     },
     {
+      key: 'React',
         title: <p>React</p>,
         description: (
             <section>
@@ -47,6 +49,7 @@ export const Skills = [
         icon: <FaReact size={50} />
     },
     {
+      key: 'CSS',
         title: <p>CSS</p>,
         description: (
             <section>
@@ -59,7 +62,8 @@ export const Skills = [
         icon: <PiFileCssLight size={50} />
     },
     {
-        title: <p>DotNep</p>,
+        key: 'dotnet',
+        title: <p>DotNet</p>,
         description: (
             <section>
                 Experienced and proficient using and bootstrapping web / service applications.
@@ -71,6 +75,7 @@ export const Skills = [
         icon: <SiDotnet size={50} />
     },
     {
+      key: 'Scripting',
         title: <p>Scripting</p>,
         description: (
             <section>
@@ -85,6 +90,7 @@ export const Skills = [
         icon: <SiGnubash size={50}/>
     },
     {
+      key: 'CI/CD',
         title: <p>CI / CD</p>,
         description: (
             <section>
@@ -95,9 +101,10 @@ export const Skills = [
         ),
         image: skills,
         link: [{}],
-        icon: <SiMicrosoftazure size={50}/>
+        icon: <SiMicrostrategy size={50}/>
     },
     {
+      key: 'Database',
         title: <p>Data</p>,
         description: (
             <section>

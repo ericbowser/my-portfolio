@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "webpack:prod": "webpack-dev-server --mode=production",
-    "webpack:dev": "webpack-dev-server --mode=development",
+    "dev": "webpack-dev-server --mode=development",
     "build": "webpack build --mode=production",
-    "start": "webpack-dev-server",
-    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "env": "npx dotenv-vault@latest pull"
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css",
+    "tail:watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "env": "npx dotenv-vault@latest pull",
+    "clean": "rm node_modules/ -R && rm package-lock.json && npm install"
   },
   "dependencies": {
     "axios": "^1.7.2",

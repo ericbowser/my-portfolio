@@ -4,7 +4,7 @@ import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
 import head2 from '../public/eb-1.jpg';
 import Footer from './components/Footer';
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
 import EmailSubmit from "./components/EmailSubmit";
 
@@ -25,7 +25,7 @@ const App = () => {
         <div className={darkMode ? "dark" : ""}>
             <div className={'flex dark:bg-gray-800 dark:text-white'}>
                 <div className={'dark:bg-gray-800 dark:text-white'}>
-                    <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
+                    <Navbar setDarkMode={setDarkMode} darkMode={darkMode}/>
                     <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
                         <div className="flex text-center" style={{paddingTop: '150px'}}>
                             {/* Profile Image */}

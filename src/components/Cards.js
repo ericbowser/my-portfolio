@@ -22,9 +22,10 @@ const Cards = () => {
                         </div>
                         <div>
 
-                            {/*   {skill.link.map(x => {
+                               {skill.link.map((x, index) => {
                                     return (
                                         <div
+                                          key={`${index}${x}`}
                                             className={'flex items-center justify-start space-x-4 border-t border-gray-200"'}>
                                             <a
                                                 href={x.url}
@@ -36,7 +37,7 @@ const Cards = () => {
                                             </a>
                                         </div>
                                     )
-                                })}*/}
+                                })}
                         </div>
                     </div>
                 </div>
