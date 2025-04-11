@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {CgMail} from "react-icons/cg";
 import {animateScroll as scroll} from 'react-scroll';
-import head2 from '../public/eb-1.jpg';
+import head2 from './assets/eb-1.jpg';
 import Footer from './components/Footer';
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";

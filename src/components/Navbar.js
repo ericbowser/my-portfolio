@@ -2,7 +2,6 @@
 import {FiDribbble} from "react-icons/fi";
 import {BsFillMoonStarsFill} from "react-icons/bs";
 import {animateScroll as scroll} from "react-scroll";
-import Skills from './Skills';
 
 function Navbar({setDarkMode = () => {}, darkMode = false}) {
     const scrollTo = () => {
@@ -11,10 +10,6 @@ function Navbar({setDarkMode = () => {}, darkMode = false}) {
     
     return (
         <nav className={'dark:bg-gray-800 dark:text-white dark:backdrop-blur-lg fixed top-0 left-0 right-0 backdrop-blur-lg bg-white/30 border-b border-gray-200 p-10'}>
-{/*
-          {Skills.map(x, y => <div>{x.t}</div>)}
-*/}
-            
             <section className={'top-2 left-2 dark:bg-gray-800 dark:text-white'}>
                 <h1 className={'text-xl'}>
                     Developed By:
@@ -35,7 +30,7 @@ function Navbar({setDarkMode = () => {}, darkMode = false}) {
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}
-                           href={'./E.R.B-Resume-2024.docx'} download>Resume
+                           href={'../assets/erb-cv-border.docx'} download>Resume
                         </a>
                     </li>
                 </ul>

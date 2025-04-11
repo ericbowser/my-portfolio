@@ -15,7 +15,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-     /*   fallback: {
+       /* fallback: {
             os: require.resolve("os-browserify/browser"),
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
@@ -37,7 +37,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|pdf)$/i,
                 loader: 'file-loader',
                 options: {
                     bypassOnDebug: true, // webpack@1.x
@@ -59,9 +59,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./src/index.html"})
+        new HtmlWebpackPlugin({template: "./public/index.html"})
     ],
-    devtool: "eval",
+    devtool: "eval-source-map",
     stats: {
         errorDetails: true,
         warnings: true
@@ -70,7 +70,7 @@ module.exports = {
         historyApiFallback: true,
         open: true,
         port: process.env.PORT,
-        host: 'localhost'
+        host: process.env.HOST || '127.0.0.1',
     },
     performance:
         {
