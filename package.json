@@ -11,7 +11,7 @@
     "clean": "rm node_modules/ -R && rm package-lock.json && npm install"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.8.2",
     "dotenv-webpack": "^8.1.0",
     "gmail-send": "^1.8.14",
     "react": "^18",
