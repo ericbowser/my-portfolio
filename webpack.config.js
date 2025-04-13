@@ -2,11 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require('dotenv').config();
 
-const port = config.parsed.PORT || 3000
+const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'production';
+const host = process.env.HOST || '127.0.0.1';
 
 console.log('port: ', port);
 console.log('env: ', environment);
+console.log('HOST: ', host);
+
 module.exports = {
     entry: './src/index.js',
     mode: environment,
@@ -69,7 +72,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         open: true,
-        port: process.env.PORT,
+        port: process.env.PORT || 3000,
         host: process.env.HOST || '127.0.0.1',
     },
     performance:

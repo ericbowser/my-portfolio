@@ -1,79 +1,99 @@
-import React, {useEffect, useState} from "react";
-import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
-import {CgMail} from "react-icons/cg";
-import {animateScroll as scroll} from 'react-scroll';
+import React, { useState, useEffect } from "react";
+import { Element } from 'react-scroll';
 import head2 from './assets/eb-1.jpg';
 import Footer from './components/Footer';
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
 import EmailSubmit from "./components/EmailSubmit";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
-    const [showContact, setShowContact] = useState(false);
-    const [page, setPage] = useState('/');
 
+    // Load dark mode preference from localStorage
     useEffect(() => {
-    }, [page, showContact]);
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode) {
+            setDarkMode(JSON.parse(savedDarkMode));
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Use system preference as fallback
+            setDarkMode(true);
+        }
+    }, []);
 
-    const scrollToPoint = (to = 0) => {
-        scroll.scrollTo(to);
-        setShowContact(true);
-    }
+    // Save dark mode preference to localStorage
+    useEffect(() => {
+        localStorage.setItem('darkMode', JSON.stringify(darkMode));
+        // Apply or remove dark class from html element for better dark mode
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [darkMode]);
 
     return (
-        <div className={darkMode ? "dark" : ""}>
-            <div className={'flex dark:bg-gray-800 dark:text-white'}>
-                <div className={'dark:bg-gray-800 dark:text-white'}>
-                    <Navbar setDarkMode={setDarkMode} darkMode={darkMode}/>
-                    <div className={'flex items-center justify-center dark:bg-gray-800 dark:text-white'}>
-                        <div className="flex text-center" style={{paddingTop: '150px'}}>
-                            {/* Profile Image */}
-                            <img
-                                className=" rounded-2xl w-80 h-96 object-cover"
-                                src={head2}
-                                alt="E.R.B."
-                            />
-                            <ul className={'mt-8 ml-10 font-burtons size-3 text-xl'}>
-                                <li>React</li>
-                                <li>.NET</li>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>Node</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h2 className={'mt-8 text-2xl font-semibold py-2 text-teal-600 text-center font-burtons dark:text-white dark:bg-gray-800'}>Eric
-                        Ryan Bowser</h2>
-                    <div className={'text-5xl flex justify-center gap-16 p-3 cursor-pointer'}>
-                        <a href={'https://github.com/ericbowser/'}>
-                            <AiFillGithub/>
-                        </a>
-                        <a href={'https://www.linkedin.com/in/eric-bowser-dev/'}>
-                            <AiFillLinkedin/>
-                        </a>
-                        <a onClick={() => scrollToPoint(2100)}>
-                            <CgMail/>
-                        </a>
-                    </div>
-                    <div style={{marginLeft: '10%', marginRight: '10%', padding: '5%'}}>
-                        <h1 className={'text-5xl text-black dark:text-white font-medium text-center font-burtons '}>Skills</h1>
-                        <div
-                            className={'text-black flex flex-col md:flex-row sm:flex-row flex-wrap dark:text-white dark:bg-gray-800'}>
-                            <Cards/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={'dark:bg-gray-800 dark:text-white'} style={{paddingTop: '150px'}}>
-                {showContact && (
-                    <EmailSubmit/>
-                )}
-            </div>
-            <div className={'fixed-bottom p-12 dark:bg-gray-800 dark:text-white'}>
-                <Footer/>
-            </div>
-        </div>
+      <div className={darkMode ? "dark" : ""}>
+          <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+              {/* Navbar */}
+              <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
+
+              {/* About Section */}
+              <Element name="about">
+                  <About profileImage={head2} />
+              </Element>
+
+              {/* Skills Section */}
+              <Element name="skills">
+                  <section className="py-20">
+                      <div className="container mx-auto px-4">
+                          <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 font-burtons">
+                                  Technical Skills
+                              </h2>
+                              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                                  A comprehensive overview of my technical expertise and professional capabilities.
+                              </p>
+                          </div>
+
+                          <Cards />
+                      </div>
+                  </section>
+              </Element>
+
+              {/* Projects Section */}
+              <Element name="projects">
+                  <div className="bg-gray-50 dark:bg-gray-800">
+                      <Projects />
+                  </div>
+              </Element>
+
+              {/* Contact Section */}
+              <Element name="contact">
+                  <section className="py-20">
+                      <div className="container mx-auto px-4 flex flex-col items-center">
+                          <div className="text-center mb-12 max-w-2xl">
+                              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 font-burtons">
+                                  Get In Touch
+                              </h2>
+                              <p className="text-lg text-gray-600 dark:text-gray-300">
+                                  Interested in working together or have questions about my experience?
+                                  Feel free to reach out through the form below.
+                              </p>
+                          </div>
+
+                          <div className="w-full max-w-md">
+                              <EmailSubmit />
+                          </div>
+                      </div>
+                  </section>
+              </Element>
+
+              {/* Footer */}
+              <Footer />
+          </div>
+      </div>
     );
 }
 
