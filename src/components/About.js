@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const About = ({ profileImage }) => {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900 mt-20">
+    <section id="about" className="font-burtons py-20 bg-gray-50 dark:bg-gray-900 mt-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Profile Image Column */}

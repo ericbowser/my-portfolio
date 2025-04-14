@@ -9,7 +9,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                burtons: ['./src/assets/fonts/burtons.otf']
+                burtons: ['../src/assets/fonts/Burtons.otf']
             }
         },
     },

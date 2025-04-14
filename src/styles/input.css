@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: "burtons";
-    src: url("../assets/fonts/Burtons.otf")
-    format('opentype');
+    src: url("../assets/fonts/Burtons.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
+
 .card-header {
     padding: 10px;
     margin: 13px;

@@ -725,16 +725,16 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .block {
@@ -1142,7 +1142,7 @@ video {
 }
 
 .font-burtons {
-  font-family: ./src/assets/fonts/burtons.otf;
+  font-family: ../src/assets/fonts/Burtons.otf;
 }
 
 .text-2xl {
@@ -1318,8 +1318,7 @@ video {
 @font-face {
   font-family: "burtons";
 
-  src: url("../assets/fonts/Burtons.otf")
-    format('opentype');
+  src: url("../assets/fonts/Burtons.otf") format('opentype');
 
   font-weight: normal;
 
