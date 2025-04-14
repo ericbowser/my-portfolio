@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode=development",
-    "build": "webpack build --mode=production",
     "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css && webpack build --mode=production",
     "env": "npx dotenv-vault@latest pull",
     "clean": "rm node_modules/ -R && rm package-lock.json && npm install"
   },
