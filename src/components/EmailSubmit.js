@@ -25,13 +25,13 @@ const EmailSubmit = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!validate()) return;
 
     // Create mailto link with form data
-    const mailtoLink = `mailto:laser@new-collar.space?subject=${encodeURIComponent(`Portfolio Contact: ${formData.subject}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    const sendMailResponse = await 
 
     // Open the user's default email client
     window.location.href = mailtoLink;
