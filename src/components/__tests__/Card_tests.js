@@ -13,7 +13,7 @@ describe('the Card component', () => {
     expect(cards.length).toBeGreaterThan(1);
   });
   
-  it.only('renders Skills', () => {
+  it('renders Skills', () => {
     const {getAllByTestId} = render(<Skills/>);
     const cards = getAllByTestId('CardSkill');
     expect(cards.length).toBeGreaterThan(1);

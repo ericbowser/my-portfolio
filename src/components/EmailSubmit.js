@@ -1,5 +1,6 @@
 ﻿import React, { useState } from "react";
 import { MdSend, MdCheckCircle } from "react-icons/md";
+import sendEmail from '../../api/sendMail'
 
 const EmailSubmit = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -31,10 +32,11 @@ const EmailSubmit = () => {
     if (!validate()) return;
 
     // Create mailto link with form data
-    const sendMailResponse = await 
+    const sendMailResponse = await sendEmail(formData);
+    console.log(sendMailResponse);
 
     // Open the user's default email client
-    window.location.href = mailtoLink;
+    // window.location.href = sendMailResponse.;
 
     // Set submitted state for UI feedback
     setIsSubmitted(true);
