@@ -18,7 +18,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-       /* fallback: {
+        fallback: {
             os: require.resolve("os-browserify/browser"),
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
@@ -27,7 +27,7 @@ module.exports = {
             assert: require.resolve("assert"),
             http: require.resolve("stream-http"),
             stream: require.resolve("stream-browserify")
-        },*/
+        },
         extensions: [".jsx", ".js"]
     },
     module: {
