@@ -1,10 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const config = require('dotenv').config();
+const webpack = require('webpack');
+const config = require('./env.json');
+const Dotenv = require('dotenv-webpack');
 
-const port = process.env.PORT || 3000
-const environment = process.env.NODE_ENV || 'production';
-const host = process.env.HOST || '127.0.0.1';
+const dotenv = require('dotenv').config();
+// const config = dotenv.config();
+console.log(dotenv.parsed)
+
+const port = config.PORT || 3000
+const environment = config.NODE_ENV || 'production';
+const host = config.HOST || '127.0.0.1';
 
 console.log('port: ', port);
 console.log('env: ', environment);
@@ -62,7 +68,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./public/index.html"})
+        new HtmlWebpackPlugin({template: "./public/index.html"}),
+        new Dotenv({
+            path: 'env.json' // from your pull
+        }),
+       
     ],
     devtool: "eval-source-map",
     stats: {
@@ -72,8 +82,11 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         open: true,
-        port: process.env.PORT || 3000,
-        host: process.env.HOST || '127.0.0.1',
+        port: port || 3000,
+        host: host || '127.0.0.1',
+        hot: true,
+        liveReload: true
+        // https: 
     },
     performance:
         {
