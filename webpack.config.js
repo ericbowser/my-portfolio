@@ -92,8 +92,8 @@ module.exports = {
         {
             hints: false,
             maxEntrypointSize:
-                312000,
+                512000,
             maxAssetSize:
-                312000,
+                512000,
         }
 };
