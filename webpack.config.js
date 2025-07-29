@@ -3,6 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const config = require('./env.json');
 const Dotenv = require('dotenv-webpack');
+const fs = require('fs');
+
+let httpsConfig = {
+    key: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.key')),
+    cert: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.crt')),
+};
 
 const dotenv = require('dotenv').config();
 // const config = dotenv.config();
@@ -18,6 +24,18 @@ console.log('HOST: ', host);
 
 module.exports = {
     entry: './src/index.js',
+    devServer: {
+        historyApiFallback: true,
+        open: true,
+        port: port || 3000,
+        host: host || '127.0.0.1',
+        hot: true,
+        liveReload: true,
+        server: {
+            type: 'https',
+           options: httpsConfig
+        }
+    },
     mode: environment,
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -78,15 +96,6 @@ module.exports = {
     stats: {
         errorDetails: true,
         warnings: true
-    },
-    devServer: {
-        historyApiFallback: true,
-        open: true,
-        port: port || 3000,
-        host: host || '127.0.0.1',
-        hot: true,
-        liveReload: true
-        // https: 
     },
     performance:
         {
