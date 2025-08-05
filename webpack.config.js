@@ -2,17 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const config = require('./env.json');
-const Dotenv = require('dotenv-webpack');
 const fs = require('fs');
-
+/*
 let httpsConfig = {
     key: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.key')),
     cert: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.crt')),
-};
-
-const dotenv = require('dotenv').config();
-// const config = dotenv.config();
-console.log(dotenv.parsed)
+};*/
 
 const port = config.PORT || 3000
 const environment = config.NODE_ENV || 'production';
@@ -33,7 +28,7 @@ module.exports = {
         liveReload: true,
         server: {
             type: 'https',
-           options: httpsConfig
+           options: {}
         }
     },
     mode: environment,
@@ -43,14 +38,14 @@ module.exports = {
     },
     resolve: {
         fallback: {
-            os: require.resolve("os-browserify/browser"),
+      /*      os: require.resolve("os-browserify/browser"),
             path: require.resolve("path-browserify"),
             crypto: require.resolve("crypto-browserify"),
             https: require.resolve("https-browserify"),
             url: require.resolve("url"),
             assert: require.resolve("assert"),
             http: require.resolve("stream-http"),
-            stream: require.resolve("stream-browserify")
+            stream: require.resolve("stream-browserify")*/
         },
         extensions: [".jsx", ".js"]
     },
@@ -86,23 +81,19 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./public/index.html"}),
-        new Dotenv({
-            path: 'env.json' // from your pull
-        }),
-       
+        new HtmlWebpackPlugin({template: "./public/index.html"})
     ],
     devtool: "eval-source-map",
     stats: {
         errorDetails: true,
         warnings: true
     },
-    performance:
+  /*  performance:
         {
             hints: false,
             maxEntrypointSize:
                 512000,
             maxAssetSize:
                 512000,
-        }
+        }*/
 };
