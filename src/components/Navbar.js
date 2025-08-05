@@ -30,7 +30,7 @@ function Navbar({setDarkMode = () => {}, darkMode = false}) {
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}
-                           href={'../assets/erb-cv-border.docx'} download>Resume
+                           href={'../../public/eb_8_4_2025_cv.pdf'} download>Resume
                         </a>
                     </li>
                 </ul>

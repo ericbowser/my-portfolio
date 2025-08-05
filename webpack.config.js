@@ -59,7 +59,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(gif|png|jpe?g|svg|pdf)$/i,
+                test: /\.(gif|png|jpe?g|svg|pdf|docx)$/i,
                 loader: 'file-loader',
                 options: {
                     bypassOnDebug: true, // webpack@1.x
@@ -88,12 +88,12 @@ module.exports = {
         errorDetails: true,
         warnings: true
     },
-  /*  performance:
+    performance:
         {
             hints: false,
             maxEntrypointSize:
                 512000,
             maxAssetSize:
                 512000,
-        }*/
+        }
 };

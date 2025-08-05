@@ -87,7 +87,7 @@ const About = ({ profileImage }) => {
             {/* Call to Action Buttons */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="../assets/erb-cv-border.docx"
+                href="../../public/eb_8_4_2025_cv.pdf"
                 download
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-medium rounded-md hover:opacity-90 transition-opacity"
               >
