@@ -7,6 +7,7 @@
     "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
     "build": "webpack --mode=production",
+    "serve": "npx serve",
     "env": "npx dotenv-vault@latest pull",
     "clean": "rm node_modules/ -R && rm package-lock.json && npm install"
   },
@@ -37,6 +38,7 @@
     "path-browserify": "^1.0.1",
     "postcss": "^8.4.38",
     "react-bootstrap": "^2.10.9",
+    "serve": "^14.2.4",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "style-loader": "^4.0.0",
