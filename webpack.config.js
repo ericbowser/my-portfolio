@@ -12,14 +12,14 @@ let httpsConfig = {
 console.log(config.PORT)
 const port = config.PORT || 3000
 const environment = config.NODE_ENV || 'production';
-const host = config.HOST || '127.0.0.1';
+const host = config.HOST || 'localhost';
 
 console.log('port: ', port);
 console.log('env: ', environment);
 console.log('HOST: ', host);
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/main.jsx',
     devServer: {
         historyApiFallback: true,
         open: true,
