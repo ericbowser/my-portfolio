@@ -1,9 +1,8 @@
 ﻿import React from 'react';
 import { RiJavascriptLine } from "react-icons/ri";
-import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaServer, FaMicrosoft } from "react-icons/fa";
-import { SiDotnet, SiGnubash, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGithub, FaServer, FaMicrosoft } from "react-icons/fa";
+import { SiPostgresql } from "react-icons/si";
 import { PiFileSql, PiFileCssLight } from "react-icons/pi";
-import { TbBrandCSharp } from "react-icons/tb";
 import { BsGearFill } from "react-icons/bs";
 
 const Skills = [
