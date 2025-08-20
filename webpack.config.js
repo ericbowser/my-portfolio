@@ -2,18 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const config = require('./env.json');
-const Dotenv = require('dotenv-webpack');
 const fs = require('fs');
-
+/*
 let httpsConfig = {
-    key: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.key')),
-    cert: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/server.crt')),
-};
+    key: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/localhostkey.pem')),
+    cert: fs.readFileSync(path.resolve(__dirname, 'ssl_cert/localhost.pem')),
+};*/
 
-const dotenv = require('dotenv').config();
-// const config = dotenv.config();
-console.log(dotenv.parsed)
-
+console.log(config.PORT)
 const port = config.PORT || 3000
 const environment = config.NODE_ENV || 'production';
 const host = config.HOST || '127.0.0.1';
@@ -33,7 +29,7 @@ module.exports = {
         liveReload: true,
         server: {
             type: 'https',
-           options: httpsConfig
+           options: {}
         }
     },
     mode: environment,
@@ -86,11 +82,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "./public/index.html"}),
-        new Dotenv({
-            path: 'env.json' // from your pull
-        }),
-       
+        new HtmlWebpackPlugin({template: "./public/index.html"})
     ],
     devtool: "eval-source-map",
     stats: {
