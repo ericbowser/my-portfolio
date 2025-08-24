@@ -7,7 +7,7 @@
     "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
     "dev": "vite serve --mode development",
-    "build": "vite build --mode production",
+    "build": "npm run tail && vite build --mode production",
     "serve": "npx serve",
     "clean": "rm node_modules/ -R && rm package-lock.json && npm install"
   },
