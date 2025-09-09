@@ -92,7 +92,7 @@ const Footer = () => {
               </Link>
             </div>
             <a
-              href="../assets/erb-cv-border.docx"
+              href="../assets/cv_8_4_2025.docx"
               download
               className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
             >
