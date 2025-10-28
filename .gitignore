@@ -46,3 +46,5 @@ env.json
 !.env.vault
 .env*
 /ssl_cert/
+ssl/
+/env.json

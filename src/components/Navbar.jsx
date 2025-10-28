@@ -2,6 +2,7 @@
 import {FiDribbble} from "react-icons/fi";
 import {BsFillMoonStarsFill} from "react-icons/bs";
 import {animateScroll as scroll} from "react-scroll";
+import resume from '../assets/erb_cv_resume.pdf';
 
 function Navbar({setDarkMode = () => {}, darkMode = false}) {
     const scrollTo = () => {
@@ -30,7 +31,7 @@ function Navbar({setDarkMode = () => {}, darkMode = false}) {
                     </li>
                     <li>
                         <a className={'bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8'}
-                           href={'../assets/cv_8_4_2025.docx'} download>Resume
+                           href={resume} download>Resume
                         </a>
                     </li>
                 </ul>

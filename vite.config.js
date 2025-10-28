@@ -10,7 +10,7 @@ module.exports = defineConfig({
    sourcemap: config.NODE_ENV === 'development' 
   },
   server: {
-    port: 3000,
+    port: config.PORT || 3000,
     host: 'localhost',
     https: {
       cert: 'ssl/server.crt',
