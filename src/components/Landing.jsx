@@ -39,7 +39,7 @@ const Landing = ({ onNavigate, darkMode }) => {
   ];
 
   return (
-    <div className="w-full flex-1 flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 px-4">
+    <div className="w-full flex-1 flex flex-col items-center justify-center bg-transparent px-4">
       <div className="flex flex-col items-center justify-center w-full max-w-5xl py-4">
         {/* Hero Section */}
         <div className="text-center mb-2 space-y-1 animate-fadeIn">

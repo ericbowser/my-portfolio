@@ -1,63 +1,88 @@
 ﻿import React, { useState } from 'react';
 import { FiGithub, FiExternalLink, FiChevronRight } from 'react-icons/fi';
 
-// Sample project data - replace with your actual projects
+// Project data showcasing full-stack development, React, .NET, and cloud expertise
 const projectsData = [
+    {
+        id: 'cloudprepper',
+        title: 'CloudPrepper - Cloud Certification Study Platform',
+        description: 'A comprehensive full-stack application for preparing for cloud certifications (CompTIA Cloud+, AWS). Built with React frontend and Node.js backend.',
+        featuredImage: '/path/to/image.jpg',
+        technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Docker'],
+        links: {
+            frontend: 'https://github.com/ericbowser/CloudPrepper',
+            backend: 'https://github.com/ericbowser/cloud_prepper_api',
+            live: null
+        },
+        details: 'CloudPrepper is a full-stack cloud certification study platform designed to help developers prepare for CompTIA Cloud+ and AWS Solutions Architect certifications. The application demonstrates modern web development practices with a React TypeScript frontend and Node.js/Express backend.',
+        highlights: [
+            'Built responsive React frontend with TypeScript for type safety',
+            'Implemented flashcard system with spaced repetition algorithm',
+            'Created RESTful API with Node.js/Express for progress tracking and analytics',
+            'Designed PostgreSQL database schema for efficient data storage',
+            'Containerized application using Docker for consistent deployment',
+            'Developed practice exam engine with real-time progress monitoring'
+        ]
+    },
     {
         id: 'ai-assistant',
         title: 'AI Assistant Tools',
         description: 'Personal AI toolkit integrating with various AI models including OpenAI, Google Gemini, and Anthropic Claude.',
-        featuredImage: '/path/to/image.jpg', // Replace with actual path
-        technologies: ['React', 'Node.js', 'Express', 'API Integration'],
+        featuredImage: '/path/to/image.jpg',
+        technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'API Integration'],
         links: {
             github: 'https://github.com/ericbowser/Assist',
             frontend: 'https://github.com/ericbowser/AssistFront',
-            live: null // Replace with actual URL if available
+            live: null
         },
-        details: 'A comprehensive AI assistant toolkit featuring a Node.js backend that integrates with popular AI models (OpenAI, Google Gemini, Claude) and a React frontend for a seamless user experience. The application allows users to interact with multiple AI models through a unified interface.',
+        details: 'A comprehensive AI assistant toolkit featuring a Node.js backend that integrates with popular AI models (OpenAI, Google Gemini, Claude) and a React frontend for a seamless user experience. The application demonstrates API integration patterns and real-time streaming of responses.',
         highlights: [
-            'Integrated multiple AI APIs with a consistent interface',
-            'Implemented prompt engineering techniques for optimal AI responses',
-            'Built a responsive React frontend with modern UI/UX principles',
-            'Created a stable and scalable Node.js backend'
+            'Integrated multiple AI APIs with a unified interface',
+            'Implemented real-time streaming responses from AI models',
+            'Applied prompt engineering techniques for optimal AI interactions',
+            'Built responsive React frontend with TypeScript',
+            'Created scalable Node.js/Express backend with error handling',
+            'Developed secure API key management system'
         ]
     },
     {
         id: 'pet-id-tags',
-        title: 'Pet ID Tags',
-        description: 'A full-stack application for creating and managing ID tags for pets with QR code functionality.',
-        featuredImage: '/path/to/image.jpg', // Replace with actual path
-        technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
+        title: 'Pet ID Tags - Full-Stack Application',
+        description: 'A complete full-stack solution for creating and managing smart pet ID tags with QR code functionality, user authentication, and containerized deployment.',
+        featuredImage: '/path/to/image.jpg',
+        technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Docker', 'JWT'],
         links: {
-            github: null, // Replace with actual URL if available
             frontend: 'https://github.com/ericbowser/LaserTags',
             backend: 'https://github.com/ericbowser/backendlaser',
-            live: null // Replace with actual URL if available
+            live: null
         },
-        details: 'An end-to-end solution for pet owners to create customized ID tags with QR codes that link to pet profiles with contact information. The system includes user authentication, pet profile management, and QR code generation.',
+        details: 'An end-to-end full-stack solution for pet owners to create customized ID tags with QR codes that link to pet profiles containing contact information. The system includes secure user authentication, profile management, and QR code generation with database persistence.',
         highlights: [
-            'Implemented a PostgreSQL database with efficient schema design',
-            'Created a containerized application environment using Docker',
-            'Developed secure user authentication and profile management',
-            'Built QR code generation and scanning functionality'
+            'Designed PostgreSQL database schema with optimal indexing',
+            'Implemented JWT-based user authentication and authorization',
+            'Built RESTful APIs with Node.js/Express backend',
+            'Developed responsive React frontend with modern UI patterns',
+            'Created Docker containers for consistent development and production deployment',
+            'Implemented QR code generation and secure profile management'
         ]
     },
     {
         id: 'portfolio-website',
         title: 'Portfolio Website',
-        description: 'A responsive portfolio website showcasing skills and projects with dark mode support and modern UI.',
-        featuredImage: '/path/to/image.jpg', // Replace with actual path
-        technologies: ['React', 'Tailwind CSS', 'Webpack', 'Responsive Design'],
+        description: 'A responsive portfolio website showcasing skills and projects with dark mode support, responsive design, and modern interactive UI components.',
+        featuredImage: '/path/to/image.jpg',
+        technologies: ['React', 'Tailwind CSS', 'Vite', 'Responsive Design'],
         links: {
             github: 'https://github.com/ericbowser/my-portfolio',
             live: 'https://erb-think.com'
         },
-        details: 'A personal portfolio website built with React and Tailwind CSS, featuring dark mode support, responsive design, and interactive UI components. The site showcases skills, projects, and professional experience.',
+        details: 'A personal portfolio website built with React and Tailwind CSS, featuring dark mode support, responsive design, and interactive UI components that showcase skills, projects, and professional experience.',
         highlights: [
             'Implemented dark mode with persistent user preferences',
-            'Created responsive layouts with Tailwind CSS',
+            'Created fully responsive layouts with Tailwind CSS',
             'Built custom animations and interactive elements',
-            'Optimized performance with Webpack bundling'
+            'Optimized performance with Vite bundling',
+            'Integrated contact form with email functionality'
         ]
     }
 ];
@@ -198,8 +223,8 @@ const Projects = () => {
                       Featured Projects
                   </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                      A selection of my recent work highlighting my skills in full-stack development,
-                      React applications, and API integration.
+                      A selection of my recent work showcasing expertise in React frontend development, Node.js/Express backend architecture,
+                      full-stack applications, and cloud-native solutions. Each project demonstrates modern development practices and scalable design patterns.
                   </p>
               </div>
 

@@ -71,7 +71,7 @@ const App = () => {
     if (currentView === 'landing') {
         return (
             <div className={darkMode ? "dark" : ""}>
-                <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+                <div className="flex flex-col min-h-screen bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white">
                     <Navbar 
                         setDarkMode={setDarkMode} 
                         darkMode={darkMode}
@@ -87,7 +87,7 @@ const App = () => {
     // Render focused section view
     return (
         <div className={darkMode ? "dark" : ""}>
-            <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+            <div className="min-h-screen bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white">
                 <Navbar 
                     setDarkMode={setDarkMode} 
                     darkMode={darkMode}
