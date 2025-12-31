@@ -7,7 +7,6 @@ const projectsData = [
         id: 'cloudprepper',
         title: 'CloudPrepper - Cloud Certification Study Platform',
         description: 'A comprehensive full-stack application for preparing for cloud certifications (CompTIA Cloud+, AWS). Built with React frontend and Node.js backend.',
-        featuredImage: '/path/to/image.jpg',
         technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Docker'],
         links: {
             frontend: 'https://github.com/ericbowser/CloudPrepper',
@@ -28,7 +27,6 @@ const projectsData = [
         id: 'ai-assistant',
         title: 'AI Assistant Tools',
         description: 'Personal AI toolkit integrating with various AI models including OpenAI, Google Gemini, and Anthropic Claude.',
-        featuredImage: '/path/to/image.jpg',
         technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'API Integration'],
         links: {
             github: 'https://github.com/ericbowser/Assist',
@@ -49,7 +47,6 @@ const projectsData = [
         id: 'pet-id-tags',
         title: 'Pet ID Tags - Full-Stack Application',
         description: 'A complete full-stack solution for creating and managing smart pet ID tags with QR code functionality, user authentication, and containerized deployment.',
-        featuredImage: '/path/to/image.jpg',
         technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Docker', 'JWT'],
         links: {
             frontend: 'https://github.com/ericbowser/LaserTags',
@@ -70,7 +67,6 @@ const projectsData = [
         id: 'portfolio-website',
         title: 'Portfolio Website',
         description: 'A responsive portfolio website showcasing skills and projects with dark mode support, responsive design, and modern interactive UI components.',
-        featuredImage: '/path/to/image.jpg',
         technologies: ['React', 'Tailwind CSS', 'Vite', 'Responsive Design'],
         links: {
             github: 'https://github.com/ericbowser/my-portfolio',
@@ -92,34 +88,16 @@ const ProjectCard = ({ project }) => {
 
     return (
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl">
-          {/* Project Image */}
-          <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
-              {project.featuredImage ? (
-                <img
-                  src={project.featuredImage}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="flex items-center justify-center h-full">
-                    <span className="text-gray-500 dark:text-gray-400">No image available</span>
-                </div>
-              )}
-
-              {/* Technology Tags */}
-              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/70 to-transparent">
-                  <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, index) => (
-                        <span key={index} className="text-xs px-2 py-1 bg-teal-500/80 text-white rounded-full">
-                {tech}
-              </span>
-                      ))}
-                  </div>
-              </div>
-          </div>
-
           {/* Project Info */}
           <div className="p-6">
+              {/* Technology Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="text-xs px-2 py-1 bg-teal-500/80 text-white rounded-full">
+          {tech}
+        </span>
+                  ))}
+              </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {project.title}
               </h3>

@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { FiHome } from "react-icons/fi";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import resume from '../assets/erb_cv_resume.pdf';
+import resume from '../assets/erb_cv_resume_2.pdf';
 
 function Navbar({ setDarkMode = () => {}, darkMode = false, showBackButton = false, onBackToLanding = () => {} }) {
     return (
