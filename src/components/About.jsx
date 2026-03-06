@@ -1,109 +1,159 @@
-﻿import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 
-const About = ({ profileImage }) => {
+const About = ({ profileImage, darkMode, onNavigate }) => {
+  const [imgHover, setImgHover] = useState(false);
+
+  const highlights = [
+    { label: '10+ Years', desc: 'Enterprise full-stack development', color: '#00d4ff' },
+    { label: '40% Faster', desc: 'API performance gain at Maersk', color: '#a855f7' },
+    { label: '3 Apps', desc: 'Production apps built in 2024', color: '#22c55e' },
+    { label: 'Cloud+', desc: 'CompTIA & AWS certs in progress', color: '#f59e0b' },
+  ];
+
   return (
-    <section id="about" className="font-burtons py-20 bg-gray-50 dark:bg-gray-900 mt-20">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Profile Image Column */}
-          <div className="w-full lg:w-2/5 flex justify-center">
-            <div className="relative">
-              {/* Main Image */}
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-teal-500 dark:border-teal-400 shadow-xl">
-                <img
-                  src={profileImage}
-                  alt="Eric Ryan Bowser"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+    <section style={{
+      padding: '100px 24px 80px',
+      background: darkMode ? '#080c14' : '#f0f4f8',
+      minHeight: '100vh',
+    }}>
+      <style>{`
+        @keyframes erb-spin-ring { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      `}</style>
 
-              {/* Decorative Circle */}
-              <div className="absolute -z-10 top-10 -left-10 w-20 h-20 rounded-full bg-cyan-400 opacity-30 dark:opacity-20 blur-md"></div>
-              <div className="absolute -z-10 bottom-10 -right-10 w-32 h-32 rounded-full bg-teal-400 opacity-30 dark:opacity-20 blur-md"></div>
+      <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 60 }}>
+          <p style={{
+            color: '#00d4ff', fontFamily: 'monospace', fontSize: '0.75rem',
+            letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 10,
+          }}>
+            // who I am
+          </p>
+          <h2 style={{
+            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800,
+            color: darkMode ? '#f1f5f9' : '#0f172a', letterSpacing: '-0.02em',
+          }}>
+            About Me
+          </h2>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 48, alignItems: 'flex-start', justifyContent: 'center' }}>
+
+          {/* Image side */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, flexShrink: 0 }}>
+            <div
+              style={{ position: 'relative', cursor: 'default' }}
+              onMouseEnter={() => setImgHover(true)}
+              onMouseLeave={() => setImgHover(false)}
+            >
+              {/* Spinning ring */}
+              <div style={{
+                position: 'absolute', inset: -8, borderRadius: '50%',
+                border: '2px dashed rgba(0,212,255,0.3)',
+                animation: 'erb-spin-ring 12s linear infinite',
+                pointerEvents: 'none',
+              }} />
+              <div style={{
+                width: 200, height: 200, borderRadius: '50%', overflow: 'hidden',
+                border: `3px solid ${imgHover ? '#a855f7' : '#00d4ff'}`,
+                boxShadow: `0 0 ${imgHover ? '32px' : '20px'} ${imgHover ? 'rgba(168,85,247,0.4)' : 'rgba(0,212,255,0.25)'}`,
+                transition: 'all 0.3s ease',
+              }}>
+                <img src={profileImage} alt="Eric Ryan Bowser" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            </div>
+
+            {/* Social links */}
+            <div style={{ display: 'flex', gap: 12 }}>
+              {[
+                { icon: <FaGithub />, url: 'https://github.com/ericbowser', color: '#94a3b8', label: 'GitHub' },
+                { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/erbowser/', color: '#0077b5', label: 'LinkedIn' },
+              ].map(link => (
+                <a key={link.label} href={link.url} target="_blank" rel="noreferrer"
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 6,
+                    color: darkMode ? '#94a3b8' : '#64748b', textDecoration: 'none',
+                    fontSize: '0.88rem', padding: '8px 14px', borderRadius: 8,
+                    background: darkMode ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)',
+                    border: `1px solid ${darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'}`,
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.color = link.color; e.currentTarget.style.borderColor = link.color + '44'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = darkMode ? '#94a3b8' : '#64748b'; e.currentTarget.style.borderColor = darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'; }}
+                >
+                  {link.icon} {link.label}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Content Column */}
-          <div className="w-full lg:w-3/5">
-            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white font-burtons">
-              <span className="text-teal-500">Hello, I'm Eric</span>
-            </h2>
+          {/* Content side */}
+          <div style={{ flex: '1 1 420px', maxWidth: 560 }}>
+            <h3 style={{
+              fontSize: '1.5rem', fontWeight: 700, marginBottom: 20,
+              color: darkMode ? '#f1f5f9' : '#0f172a',
+            }}>
+              Hey, I'm Eric 👋
+            </h3>
 
-            <div className="text-lg text-gray-700 dark:text-gray-300 mb-8 space-y-4">
-              <p>
-                I'm a Full-Stack Developer with a passion for building modern web applications
-                using React, Node.js, and C#/.NET technologies. With over 10 years of experience
-                in software development, I specialize in creating responsive, user-friendly interfaces
-                and robust backend systems.
-              </p>
-              <p>
-                My approach to development focuses on writing clean, maintainable code following best practices
-                and industry standards. I'm experienced in Agile methodologies and have a strong foundation
-                in software architecture, database design, and API development.
-              </p>
-              <p>
-                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects,
-                and continuously improving my skills through hands-on learning and professional development.
-              </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 28 }}>
+              {[
+                "I'm a Full-Stack Software Engineer with 10+ years building mission-critical systems at companies like Maersk and Willis Towers Watson. I specialize in C#/.NET Core, React.js, and cloud architecture.",
+                "Since January 2024, I've been operating independently under Execute & Engrave LLC — shipping three production applications: CloudPrepper (a cloud cert study platform), an AI Assistant Platform integrating OpenAI, Gemini, and Claude, and a Pet ID Tags system.",
+                "I'm currently pursuing CompTIA Cloud+ and AWS Solutions Architect certifications, and actively seeking my next senior engineering role where I can bring deep enterprise experience together with modern cloud and AI skills.",
+              ].map((text, i) => (
+                <p key={i} style={{ color: darkMode ? '#94a3b8' : '#475569', lineHeight: 1.8, fontSize: '0.95rem' }}>
+                  {text}
+                </p>
+              ))}
             </div>
 
-            {/* Social Links */}
-            <div className="flex flex-wrap items-center gap-6 mb-8">
-              <a
-                href="https://github.com/ericbowser"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
-              >
-                <FaGithub className="text-xl" />
-                <span className="font-medium">GitHub</span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/eric-bowser-a25036348/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
-              >
-                <FaLinkedin className="text-xl" />
-                <span className="font-medium">LinkedIn</span>
-              </a>
-
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors cursor-pointer"
-              >
-                <FaEnvelope className="text-xl" />
-                <span className="font-medium">Contact Me</span>
-              </Link>
+            {/* Highlight grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 28 }}>
+              {highlights.map(h => (
+                <div key={h.label} style={{
+                  padding: '14px 16px',
+                  background: darkMode ? 'rgba(255,255,255,0.02)' : 'rgba(255,255,255,0.7)',
+                  border: `1px solid ${h.color}25`, borderRadius: 10,
+                }}>
+                  <div style={{ color: h.color, fontWeight: 800, fontSize: '1.1rem', fontFamily: 'monospace' }}>{h.label}</div>
+                  <div style={{ color: darkMode ? '#64748b' : '#94a3b8', fontSize: '0.78rem', marginTop: 3 }}>{h.desc}</div>
+                </div>
+              ))}
             </div>
 
-            {/* Call to Action Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="../assets/cv_8_4_2025.docx"
-                download
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-medium rounded-md hover:opacity-90 transition-opacity"
-              >
-                Download Resume
-              </a>
-
-              <Link
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="px-6 py-3 bg-white dark:bg-gray-800 text-teal-500 dark:text-teal-400 font-medium rounded-md border border-teal-500 dark:border-teal-400 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+            {/* CTAs */}
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <button
+                onClick={() => onNavigate && onNavigate('projects')}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 6,
+                  background: 'linear-gradient(135deg, #00d4ff, #0080ff)',
+                  border: 'none', color: '#080c14',
+                  padding: '11px 24px', borderRadius: 9,
+                  fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer',
+                  transition: 'transform 0.2s, opacity 0.2s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
               >
                 View Projects
-              </Link>
+              </button>
+              <button
+                onClick={() => onNavigate && onNavigate('contact')}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 6,
+                  background: 'none',
+                  border: '1px solid rgba(0,212,255,0.35)',
+                  color: '#00d4ff', padding: '11px 24px', borderRadius: 9,
+                  fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer',
+                  transition: 'background 0.2s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,212,255,0.08)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'none'}
+              >
+                <FaEnvelope /> Contact Me
+              </button>
             </div>
           </div>
         </div>
