@@ -178,7 +178,7 @@ const Landing = ({ onNavigate, darkMode }) => {
           color: '#00d4ff', marginBottom: '6px', fontFamily: 'monospace',
           opacity: visible ? 1 : 0, transition: 'opacity 0.6s ease 0.4s',
         }}>
-          Full-Stack Engineer · Cloud Architect · AI Integrations
+          Full-Stack Engineer · Cloud Architect in Training · AI Integrations
         </p>
 
         <p style={{

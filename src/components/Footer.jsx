@@ -23,7 +23,7 @@ const Footer = () => {
               Execute &amp; Engrave LLC
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-              Full-Stack Engineer · Cloud Architect · AI Integrations
+              Full-Stack Engineer · Cloud Architect in Training · AI Integrations
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-500">
               &copy; {currentYear} Eric Ryan Bowser. All rights reserved.
