@@ -24,6 +24,26 @@ const projectsData = [
     ]
   },
   {
+    id: 'boxes-js',
+    title: 'Boxes.js — Parametric Box Generator',
+    badge: 'Engineering',
+    badgeColor: '#f59e0b',
+    description: 'Browser-based parametric finger-joint box generator for laser cutting. Pure geometry engine with live SVG preview and laser-ready export — validated with physical test cuts on acrylic.',
+    technologies: ['React 19', 'Vite 7', 'Tailwind CSS 4', 'SVG', 'Geometry Engine'],
+    links: {
+      github: 'https://github.com/ericbowser/Boxes.js',
+    },
+    details: 'A product of Execute & Engrave LLC. Designs finger-joint boxes with configurable dimensions, material thickness, kerf compensation, play tolerances, and four edge types (finger joints, finger holes, stackable, straight). The geometry engine is pure math with zero UI dependencies — all rendering is live SVG with interactive hover states and zoom.',
+    highlights: [
+      'Modular architecture: geometry engine fully decoupled from UI',
+      'Four edge joint types: finger tabs, finger holes, stackable, straight',
+      'Parametric controls: kerf, play, surrounding spaces, edge width',
+      'Laser-ready SVG export with 0.1mm stroke precision',
+      'Physically validated — test cuts on 3mm acrylic with CO2 laser',
+      'Clean separation: geometry.js → edgeTypes.js → panelGenerator.js → boxGenerator.js',
+    ]
+  },
+  {
     id: 'ai-assistant',
     title: 'AI Assistant Platform Suite',
     badge: 'Full-Stack',
@@ -31,8 +51,7 @@ const projectsData = [
     description: 'Unified AI toolkit integrating OpenAI, Google Gemini, and Anthropic Claude with real-time streaming, secure API key management, and a clean React/TypeScript frontend.',
     technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'OpenAI', 'Gemini', 'Claude API'],
     links: {
-      frontend: 'https://github.com/ericbowser/AssistFront',
-      backend: 'https://github.com/ericbowser/Assist',
+      github: 'https://github.com/ericbowser/Assist',
     },
     details: 'A multi-model AI platform that abstracts provider differences behind a unified interface. Supports real-time streaming responses, conversation history management, and secure API credential handling — a practical demonstration of AI integration patterns.',
     highlights: [
