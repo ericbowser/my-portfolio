@@ -1,5 +1,10 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore"
+  "scss.lint.unknownAtRules": "ignore",
+  "autoOpenLocalhostUrls": false,
+  "glassOpenWebLinksInBrowser": true,
+  "workbench.externalBrowser": "chrome",
+  "terminal.integrated.openLinks": "external",
+  "workbench.editor.openLinks": "external",
+  "workbench.editor.customEditor.openLinks": "external"
 }
-

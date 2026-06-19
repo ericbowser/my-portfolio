@@ -1,27 +1,38 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react';
-import config from './env.json';
+import dotenv from "dotenv";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "tailwindcss";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
-module.exports = defineConfig({
+dotenv.config();
+
+const host = process.env.HOST || "localhost";
+const port = Number(process.env.PORT) || 3000;
+const isDevelopment = process.env.NODE_ENV === "development";
+
+export default defineConfig({
   plugins: [react()],
+  envPrefix: ["VITE_"],
+  define: {
+    "process.env.VITE_ASSIST_EMAIL_URL": JSON.stringify(process.env.VITE_ASSIST_EMAIL_URL || ""),
+  },
   build: {
-   outDir: 'dist',
-   sourcemap: config.NODE_ENV === 'development' 
+    outDir: "dist",
+    sourcemap: isDevelopment,
   },
   server: {
-    port: config.PORT || 3000,
-    host: 'localhost',
-    https: {
-      cert: 'ssl/server.crt',
-      key: 'ssl/server.key'
-    }
+    port,
+    host,
+    open: false,
+    ...(isDevelopment ? {} : {
+      https: {
+        cert: "ssl/server.crt",
+        key: "ssl/server.key",
+      },
+    }),
   },
   css: {
     postcss: {
-      plugins: [
-        require('tailwindcss'),
-      ]
-      }
-  }
-})
+      plugins: [tailwindcss],
+    },
+  },
+});

@@ -67,7 +67,7 @@ const Footer = () => {
                   {link.icon}
                 </a>
               ))}
-              <a href="mailto:eric@erb-think.com"
+              <a href="mailto:info@execute-engrave.com"
                 className="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
                 aria-label="Email">
                 <FaEnvelope className="text-xl" />
