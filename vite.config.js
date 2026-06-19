@@ -14,6 +14,7 @@ export default defineConfig({
   envPrefix: ["VITE_"],
   define: {
     "process.env.VITE_ASSIST_EMAIL_URL": JSON.stringify(process.env.VITE_ASSIST_EMAIL_URL || ""),
+    "process.env.EMAIL_API_KEY": JSON.stringify(process.env.EMAIL_API_KEY || ""),
   },
   build: {
     outDir: "dist",

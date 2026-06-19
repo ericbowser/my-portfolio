@@ -19,7 +19,17 @@ export default async function sendMail(formData, url = getEmailUrl()) {
     );
   }
 
-  return axios.post(url, { ...formData }, {
-    headers: { "Content-Type": "application/json" },
+  const apiKey = process.env.EMAIL_API_KEY || "";
+  const { name, email, subject, message } = formData;
+  const payload = {
+    subject,
+    text: message,
+    from: name && email ? `${name} <${email}>` : (email || undefined),
+  };
+  return axios.post(url, payload, {
+    headers: {
+      "Content-Type": "application/json",
+      ...(apiKey && { Authorization: `Bearer ${apiKey}` }),
+    },
   });
 }
