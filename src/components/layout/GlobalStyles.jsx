@@ -20,8 +20,9 @@ export default function GlobalStyles() {
       ::selection { background: ${C.vermillion}; color: ${C.white}; }
       @media (max-width: 640px) {
         nav { padding: 0 16px !important; }
-        nav > div:last-child { gap: 14px !important; }
-        nav > div:last-child button { font-size: 9px !important; letter-spacing: 0.04em !important; }
+        nav > div:last-child { gap: 10px !important; flex-wrap: wrap !important; justify-content: flex-end !important; }
+        nav > div:last-child button { font-size: 11px !important; letter-spacing: 0.06em !important; }
+        nav [data-testid="resume-download-nav"] a { font-size: 10px !important; padding: 6px 8px !important; }
       }
     `}</style>
   );

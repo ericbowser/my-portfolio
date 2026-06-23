@@ -91,7 +91,7 @@ const projectsData = [
     technologies: ['React', 'Tailwind CSS', 'Vite', 'Node.js', 'SendGrid', 'Docker', 'NGINX'],
     links: {
       github: 'https://github.com/ericbowser/my-portfolio',
-      live: 'https://erb-think.com',
+      live: 'https://collar-culture.com',
     },
     details: 'A production-grade portfolio demonstrating modern frontend practices: dark mode with localStorage persistence, smooth scroll navigation, animated components, and a microservices email backend using Google Auth + SendGrid — all containerized and served via NGINX with Cloudflare SSL.',
     highlights: [

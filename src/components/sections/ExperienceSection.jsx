@@ -2,7 +2,7 @@ import { useState } from "react";
 import { EXPERIENCE } from "../../data/experience";
 import { C } from "../../theme/colors";
 import { SECTION_PADDING, sectionStyle } from "../../theme/layout";
-import { mono, serif, body, bodyMuted } from "../../theme/typography";
+import { mono, serif, body, bodyMuted, type } from "../../theme/typography";
 import Reveal from "../ui/Reveal";
 import SectionTag from "../ui/SectionTag";
 
@@ -48,7 +48,7 @@ export default function ExperienceSection() {
                   </p>
                 </div>
                 <span style={{
-                  fontFamily: mono, fontSize: 13,
+                  fontFamily: mono, fontSize: type.labelSm,
                   color: C.textMuted, letterSpacing: "0.04em", whiteSpace: "nowrap",
                 }}>
                   {exp.period}
@@ -66,7 +66,7 @@ export default function ExperienceSection() {
                   {exp.bullets.map((b) => (
                     <li key={b} style={{
                       ...body,
-                      fontSize: 15,
+                      fontSize: type.bodySm,
                       paddingLeft: 16,
                       borderLeft: `2px solid ${exp.accent}`,
                     }}>
@@ -78,7 +78,7 @@ export default function ExperienceSection() {
 
               <span style={{
                 display: "inline-block",
-                fontFamily: mono, fontSize: 11, fontWeight: 700,
+                fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
                 color: expanded === i ? exp.accent : C.textMuted,
                 marginTop: 20, letterSpacing: "0.1em", textTransform: "uppercase",
                 transition: "color 0.3s",

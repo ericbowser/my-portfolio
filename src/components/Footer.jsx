@@ -44,9 +44,9 @@ const Footer = () => {
                 <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">Cloud cert study platform · IT-7000</p>
               </div>
               <div>
-                <a href="https://erb-think.com" target="_blank" rel="noreferrer"
+                <a href="https://collar-culture.com" target="_blank" rel="noreferrer"
                   className="text-sm text-teal-500 dark:text-teal-400 hover:underline font-medium">
-                  erb-think.com
+                  collar-culture.com
                 </a>
                 <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">Portfolio &amp; project hub</p>
               </div>

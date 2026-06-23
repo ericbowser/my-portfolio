@@ -1,7 +1,7 @@
 import { MOBILE_PROJECTS, WEB_PROJECTS } from "../../data/projects";
 import { C } from "../../theme/colors";
 import { SECTION_PADDING, sectionStyle } from "../../theme/layout";
-import { mono } from "../../theme/typography";
+import { mono, type } from "../../theme/typography";
 import Reveal from "../ui/Reveal";
 import SectionTag from "../ui/SectionTag";
 import { BentoProjectGrid, MobileProjectRow } from "../projects/ProjectGrids";
@@ -9,7 +9,7 @@ import { BentoProjectGrid, MobileProjectRow } from "../projects/ProjectGrids";
 function SubsectionHeading({ label }) {
   return (
     <h3 style={{
-      fontFamily: mono, fontSize: 12, fontWeight: 700,
+      fontFamily: mono, fontSize: type.label, fontWeight: 700,
       letterSpacing: "0.18em", textTransform: "uppercase",
       color: C.textMuted, margin: "0 0 28px",
       paddingBottom: 12, borderBottom: `1px solid ${C.border}`,

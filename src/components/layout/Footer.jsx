@@ -1,5 +1,5 @@
 import { C } from "../../theme/colors";
-import { mono } from "../../theme/typography";
+import { mono, type } from "../../theme/typography";
 
 export default function Footer() {
   return (
@@ -15,10 +15,10 @@ export default function Footer() {
       position: "relative",
       zIndex: 1,
     }}>
-      <span style={{ fontFamily: mono, fontSize: 11, color: C.textMuted, letterSpacing: "0.06em" }}>
+      <span style={{ fontFamily: mono, fontSize: type.labelSm, color: C.textMuted, letterSpacing: "0.06em" }}>
         © 2025 Eric Bowser — Execute & Engrave LLC
       </span>
-      <span style={{ fontFamily: mono, fontSize: 11, color: C.textMuted, letterSpacing: "0.06em" }}>
+      <span style={{ fontFamily: mono, fontSize: type.labelSm, color: C.textMuted, letterSpacing: "0.06em" }}>
         Salt Lake City, UT
       </span>
     </footer>

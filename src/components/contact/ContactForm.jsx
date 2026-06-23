@@ -1,7 +1,7 @@
 import { useState } from "react";
 import sendMail from "../../../api/sendMail";
 import { C } from "../../theme/colors";
-import { mono, sans, body } from "../../theme/typography";
+import { mono, sans, body, type } from "../../theme/typography";
 import { validateContactForm } from "../../utils/validateContactForm";
 
 const INITIAL_FORM = { name: "", email: "", subject: "", message: "" };
@@ -56,7 +56,7 @@ export default function ContactForm() {
   const fieldStyle = (hasError) => ({
     width: "100%",
     fontFamily: sans,
-    fontSize: 15,
+    fontSize: type.bodySm,
     padding: "12px 14px",
     background: C.surface,
     border: `1px solid ${hasError ? C.vermillion : C.border}`,
@@ -67,7 +67,7 @@ export default function ContactForm() {
   const labelStyle = {
     display: "block",
     fontFamily: mono,
-    fontSize: 11,
+    fontSize: type.labelSm,
     fontWeight: 700,
     letterSpacing: "0.1em",
     textTransform: "uppercase",
@@ -149,7 +149,7 @@ export default function ContactForm() {
         style={{
           alignSelf: "flex-start",
           fontFamily: mono,
-          fontSize: 11,
+          fontSize: type.labelSm,
           fontWeight: 700,
           letterSpacing: "0.1em",
           textTransform: "uppercase",

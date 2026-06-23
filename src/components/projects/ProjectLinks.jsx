@@ -1,6 +1,6 @@
 import { LINK_LABELS } from "../../data/projects";
 import { C } from "../../theme/colors";
-import { mono } from "../../theme/typography";
+import { mono, type } from "../../theme/typography";
 
 export default function ProjectLinks({ project, hovered }) {
   return (
@@ -13,7 +13,7 @@ export default function ProjectLinks({ project, hovered }) {
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
           style={{
-            fontFamily: mono, fontSize: 11, fontWeight: 700,
+            fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
             letterSpacing: "0.08em", textTransform: "uppercase",
             color: hovered ? project.accent : C.text,
             textDecoration: "none", transition: "color 0.2s",

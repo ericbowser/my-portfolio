@@ -5,7 +5,8 @@
  * Set VITE_ASSIST_EMAIL_URL in .env (see .env.example).
  *
  * Expected contract:
- *   POST { name, email, subject?, message }
+ *   POST { subject?, text, from? }
+ *   Optional header: Authorization: Bearer {EMAIL_API_KEY}
  *   → 200 { success: true }
  */
 export function getEmailUrl() {

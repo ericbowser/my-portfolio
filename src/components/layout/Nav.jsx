@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { NAV_ITEMS } from "../../data/navigation";
 import { ACCENT_CYCLE, C } from "../../theme/colors";
-import { mono } from "../../theme/typography";
+import { mono, type } from "../../theme/typography";
+import ResumeDownload from "../ui/ResumeDownload";
 
 export default function Nav({ active, onNav }) {
   const [scrolled, setScrolled] = useState(false);
@@ -25,12 +26,12 @@ export default function Nav({ active, onNav }) {
       boxShadow: scrolled ? "0 1px 0 rgba(255,255,255,0.04)" : "none",
     }}>
       <span style={{
-        fontFamily: mono, fontSize: 12, fontWeight: 700,
+        fontFamily: mono, fontSize: type.nav, fontWeight: 700,
         letterSpacing: "0.18em", textTransform: "uppercase", color: C.text,
       }}>
         Eric Bowser
       </span>
-      <div style={{ display: "flex", gap: 32 }}>
+      <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
         {NAV_ITEMS.map((item, i) => {
           const id = item.toLowerCase();
           const isActive = active === id;
@@ -41,7 +42,7 @@ export default function Nav({ active, onNav }) {
               onClick={() => onNav(id)}
               style={{
                 background: "none", border: "none", cursor: "pointer",
-                fontFamily: mono, fontSize: 12,
+                fontFamily: mono, fontSize: type.nav,
                 fontWeight: isActive ? 600 : 400,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 color: isActive ? C.text : C.textMuted,
@@ -54,6 +55,7 @@ export default function Nav({ active, onNav }) {
             </button>
           );
         })}
+        <ResumeDownload variant="nav" />
       </div>
     </nav>
   );

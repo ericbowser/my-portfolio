@@ -3,7 +3,7 @@ import Reveal from "../ui/Reveal";
 import ProjectLinks from "./ProjectLinks";
 import StatusPill from "./StatusPill";
 import { C } from "../../theme/colors";
-import { mono, serif, body, bodyMuted } from "../../theme/typography";
+import { mono, serif, body, bodyMuted, type } from "../../theme/typography";
 
 export default function ProjectCard({ project, index, size = "standard", variant = "web" }) {
   const [hovered, setHovered] = useState(false);
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, index, size = "standard", variant
             <StatusPill status={project.status} />
             {variant === "mobile" && project.platform && (
               <span style={{
-                fontFamily: mono, fontSize: 9, fontWeight: 600,
+                fontFamily: mono, fontSize: type.caption, fontWeight: 600,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 color: C.textDim, padding: "4px 8px",
                 border: `1px solid ${C.border}`,
@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index, size = "standard", variant
             )}
           </div>
           <span style={{
-            fontFamily: mono, fontSize: 10, fontWeight: 700,
+            fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
             color: hovered ? project.accent : C.textDim,
             letterSpacing: "0.1em",
           }}>
@@ -70,14 +70,14 @@ export default function ProjectCard({ project, index, size = "standard", variant
           {project.title}
         </h3>
         <p style={{
-          fontFamily: mono, fontSize: 12, fontWeight: 500,
+          fontFamily: mono, fontSize: type.labelSm, fontWeight: 500,
           color: C.textMuted, letterSpacing: "0.05em", margin: "0 0 16px",
         }}>
           {project.subtitle}
         </p>
         <p style={{
           ...body,
-          fontSize: isFeatured ? 16 : 15,
+          fontSize: isFeatured ? type.body : type.bodySm,
           margin: "0 0 20px",
           ...(isFeatured ? {} : { flex: 1 }),
         }}>
@@ -87,7 +87,7 @@ export default function ProjectCard({ project, index, size = "standard", variant
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 }}>
           {project.stack.map((t) => (
             <span key={t} style={{
-              fontFamily: mono, fontSize: 9, fontWeight: 600,
+              fontFamily: mono, fontSize: type.caption, fontWeight: 600,
               letterSpacing: "0.08em", textTransform: "uppercase",
               padding: "5px 12px",
               border: `1px solid ${hovered ? project.accent : C.border}`,
@@ -115,7 +115,7 @@ export default function ProjectCard({ project, index, size = "standard", variant
                 {project.highlights.map((h) => (
                   <li key={h} style={{
                     ...bodyMuted,
-                    fontSize: 14,
+                    fontSize: type.bodySm,
                     paddingLeft: 14,
                     borderLeft: `2px solid ${project.accent}`,
                   }}>
@@ -126,7 +126,7 @@ export default function ProjectCard({ project, index, size = "standard", variant
             </div>
             <span style={{
               display: "inline-block", marginTop: 14,
-              fontFamily: mono, fontSize: 10, fontWeight: 700,
+              fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
               color: expanded ? project.accent : C.textDim,
               letterSpacing: "0.1em", textTransform: "uppercase",
             }}>

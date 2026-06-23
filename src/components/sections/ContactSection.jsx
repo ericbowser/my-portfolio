@@ -1,7 +1,7 @@
 import { CONTACT_LINKS } from "../../data/contact";
 import { C } from "../../theme/colors";
 import { SECTION_PADDING, sectionStyle } from "../../theme/layout";
-import { mono, serif, body } from "../../theme/typography";
+import { mono, serif, body, type } from "../../theme/typography";
 import Reveal from "../ui/Reveal";
 import SectionTag from "../ui/SectionTag";
 import ContactForm from "../contact/ContactForm";
@@ -44,7 +44,7 @@ export default function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontFamily: mono, fontSize: 11, fontWeight: 700,
+                fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 color: C.text, textDecoration: "none",
                 padding: "14px 32px",

@@ -9,6 +9,7 @@ module.exports = {
   transformIgnorePatterns: ["/node_modules/(?!axios)/"],
   moduleNameMapper: {
     "\\.(css|less|scss)$": "<rootDir>/test/__mocks__/styleMock.js",
+    "\\.(pdf|docx)$": "<rootDir>/test/__mocks__/fileMock.js",
   },
   testMatch: [
     "<rootDir>/src/**/__tests__/**/*.(test|spec).js?(x)",

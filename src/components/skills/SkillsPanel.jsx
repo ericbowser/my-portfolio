@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CORE_STACK, SKILL_CATEGORIES } from "../../data/skills";
 import { C } from "../../theme/colors";
-import { mono, sans } from "../../theme/typography";
+import { mono, sans, type } from "../../theme/typography";
 
 function SkillChip({ label, accent, large = false }) {
   const [hovered, setHovered] = useState(false);
@@ -12,7 +12,7 @@ function SkillChip({ label, accent, large = false }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         fontFamily: sans,
-        fontSize: large ? 16 : 15,
+        fontSize: large ? type.body : type.bodySm,
         fontWeight: 500,
         lineHeight: 1.3,
         padding: large ? "12px 20px" : "10px 16px",
@@ -38,7 +38,7 @@ function CategoryRow({ category, compact = false }) {
         <span style={{
           display: "block",
           fontFamily: mono,
-          fontSize: 12,
+          fontSize: type.labelSm,
           fontWeight: 700,
           letterSpacing: "0.12em",
           textTransform: "uppercase",
@@ -69,7 +69,7 @@ function CategoryRow({ category, compact = false }) {
     }}>
       <span style={{
         fontFamily: mono,
-        fontSize: 13,
+        fontSize: type.label,
         fontWeight: 700,
         letterSpacing: "0.12em",
         textTransform: "uppercase",
@@ -93,7 +93,7 @@ export default function SkillsPanel({ compact = false }) {
     <>
       <p style={{
         fontFamily: mono,
-        fontSize: 12,
+        fontSize: type.labelSm,
         fontWeight: 700,
         letterSpacing: "0.14em",
         textTransform: "uppercase",
@@ -106,7 +106,7 @@ export default function SkillsPanel({ compact = false }) {
       {!compact && (
         <p style={{
           fontFamily: mono,
-          fontSize: 11,
+          fontSize: type.labelSm,
           fontWeight: 700,
           letterSpacing: "0.14em",
           textTransform: "uppercase",

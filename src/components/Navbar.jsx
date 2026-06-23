@@ -1,7 +1,8 @@
 import React from 'react';
 import { FiHome } from 'react-icons/fi';
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
-import resume from '../assets/erb_cv_resume_2.pdf';
+import resumePdf from '../assets/eric_bowser_resume_2026.pdf';
+import resumeDocx from '../assets/eric_bowser_resume_2026.docx';
 
 function Navbar({ setDarkMode = () => {}, darkMode = false, showBackButton = false, onBackToLanding = () => {} }) {
   return (
@@ -40,13 +41,24 @@ function Navbar({ setDarkMode = () => {}, darkMode = false, showBackButton = fal
               {darkMode ? <BsFillSunFill className="text-lg" /> : <BsFillMoonStarsFill className="text-lg" />}
             </button>
 
-            <a
-              href={resume}
-              download
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-opacity font-semibold text-sm"
-            >
-              <span className="hidden sm:inline">Download </span>Resume
-            </a>
+            <div className="flex items-center space-x-1">
+              <a
+                href={resumePdf}
+                download="Eric_Bowser_Resume.pdf"
+                className="px-3 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-l-lg hover:opacity-90 transition-opacity font-semibold text-sm"
+                title="Download PDF"
+              >
+                <span className="hidden sm:inline">Resume </span>PDF
+              </a>
+              <a
+                href={resumeDocx}
+                download="Eric_Bowser_Resume.docx"
+                className="px-3 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-r-lg hover:opacity-90 transition-opacity font-semibold text-sm border-l border-white/20"
+                title="Download Word"
+              >
+                DOC
+              </a>
+            </div>
           </div>
 
         </div>

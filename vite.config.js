@@ -16,6 +16,7 @@ export default defineConfig({
     "process.env.VITE_ASSIST_EMAIL_URL": JSON.stringify(process.env.VITE_ASSIST_EMAIL_URL || ""),
     "process.env.EMAIL_API_KEY": JSON.stringify(process.env.EMAIL_API_KEY || ""),
   },
+  assetsInclude: ['**/*.docx'],
   build: {
     outDir: "dist",
     sourcemap: isDevelopment,

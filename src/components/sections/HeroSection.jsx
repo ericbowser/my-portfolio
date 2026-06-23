@@ -1,8 +1,9 @@
 import { HERO_LINKS } from "../../data/contact";
 import { C } from "../../theme/colors";
-import { mono, serif, body } from "../../theme/typography";
+import { mono, serif, body, type } from "../../theme/typography";
 import SkillsPanel from "../skills/SkillsPanel";
 import Reveal from "../ui/Reveal";
+import ResumeDownload from "../ui/ResumeDownload";
 
 export default function HeroSection() {
   return (
@@ -23,7 +24,7 @@ export default function HeroSection() {
       }}>
         <Reveal>
           <p style={{
-            fontFamily: mono, fontSize: 12, fontWeight: 700,
+            fontFamily: mono, fontSize: type.label, fontWeight: 700,
             letterSpacing: "0.2em", textTransform: "uppercase",
             color: C.vermillion, marginBottom: 28,
           }}>
@@ -65,7 +66,7 @@ export default function HeroSection() {
               <div style={{ maxWidth: 400, marginTop: 36 }}>
               <p style={{
                 ...body,
-                fontSize: 17,
+                fontSize: type.body,
                 lineHeight: 1.8,
                 margin: 0,
               }}>
@@ -86,7 +87,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      fontFamily: mono, fontSize: 11, fontWeight: 700,
+                      fontFamily: mono, fontSize: type.labelSm, fontWeight: 700,
                       letterSpacing: "0.1em", textTransform: "uppercase",
                       color: C.text, textDecoration: "none",
                       padding: "10px 0", borderBottom: `2px solid ${l.accent}`,
@@ -96,6 +97,12 @@ export default function HeroSection() {
                     {l.label} ↗
                   </a>
                 ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={300}>
+              <div style={{ marginTop: 28 }}>
+                <ResumeDownload variant="hero" />
               </div>
             </Reveal>
           </div>
